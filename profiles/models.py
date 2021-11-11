@@ -16,8 +16,11 @@ class Profile(models.Model):
     name = models.CharField(max_length=25, blank=True)
     position = models.CharField(max_length=50, blank=True)
     content = models.TextField(blank=True)
+    # image = models.ImageField(
+    #     upload_to='images/', default='../default_profile_nhsuxh'
+    # )Screenshot_191_olt4tk
     image = models.ImageField(
-        upload_to='images/', default='../default_profile_nhsuxh'
+        upload_to='images/', default='/images/sand_hebjme'
     )
 
     class Meta:
