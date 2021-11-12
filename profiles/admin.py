@@ -1,6 +1,4 @@
-"""
-Admin for Profiles App
-"""
+""" Admin for Profiles App """
 from django.contrib import admin
 from .models import Profile
 
