@@ -6,9 +6,7 @@ from .models import Profile
 
 
 class ProfileSerializer(serializers.ModelSerializer):
-    """
-    Serializer class for Profiles App
-    """
+    """ Serializer class for Profiles App """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
 
@@ -17,9 +15,7 @@ class ProfileSerializer(serializers.ModelSerializer):
         return request.user == obj.owner
 
     class Meta:
-        """
-        Meta for Profiles Serializer
-        """
+        """ Meta for Profiles Serializer """
         model = Profile
         fields = [
             'id', 'owner', 'position', 'created_at', 'updated_at', 'name',

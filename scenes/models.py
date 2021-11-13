@@ -18,9 +18,13 @@ class Scene(models.Model):
     )
     time = models.CharField(max_length=255, blank=False)
     location = models.CharField(max_length=255, blank=False)
+    chatacters = models.CharField(max_length=255, blank=True)
     action = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
-    characters = models.CharField(max_length=255, blank=True)
+    shotlist = models.TextField(blank=True)
+    storyboard = models.ImageField(
+        upload_to='images/', default='', blank=True
+    )
     info = models.CharField(max_length=255, blank=True)
     image = models.ImageField(
         upload_to='images/', default='', blank=True

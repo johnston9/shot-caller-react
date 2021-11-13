@@ -3,11 +3,12 @@ from .models import Post
 
 
 class PostSerializer(serializers.ModelSerializer):
-
+    """ Posts serializer """
     owner = serializers.ReadOnlyField(source='owner.username')
-    scene = serializers.ReadOnlyField(source='scene.number')
     is_owner = serializers.SerializerMethodField()
     profile_id = serializers.ReadOnlyField(source='owner.profile.id')
+    name = serializers.ReadOnlyField(source='owner.profile.name')
+    position = serializers.ReadOnlyField(source='owner.profile.position')
     profile_image = serializers.ReadOnlyField(source='owner.profile.image.url')
 
     def validate_image(self, value):
@@ -30,7 +31,9 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = [
-            'id', 'owner', 'created_at', 'updated_at', 'title',
-            'content', 'image', 'is_owner', 'profile_id',
-            'profile_image'
+            'id', 'owner', 'scene', 'departments', 'category',
+            'created_at', 'updated_at', 'title',
+            'content', 'is_owner', 'profile_id',
+            'name', 'position', 'profile_image',
+            'image1', 'image2', 'image3', 'image4', 'image5'
         ]

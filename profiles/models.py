@@ -24,9 +24,7 @@ class Profile(models.Model):
     )
 
     class Meta:
-        """
-        Meta for ordering
-        """
+        """ Meta for ordering """
         ordering = ['-created_at']
 
     def __str__(self):
