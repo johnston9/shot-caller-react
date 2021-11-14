@@ -46,7 +46,7 @@ class PostDetail(APIView):
     ]
 
     def get_object(self, pk):
-        """ View to get a scene"""
+        """ View to get a post"""
         try:
             post = Post.objects.get(pk=pk)
             self.check_object_permissions(self.request, post)

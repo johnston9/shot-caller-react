@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     'scenes',
     'posts',
     'comments',
+    'likes',
 
 ]
 

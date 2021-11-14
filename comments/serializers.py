@@ -20,10 +20,11 @@ class CommentSerializer(serializers.ModelSerializer):
 
     class Meta:
         """ Meta for Comments Serializer """
-        model = Comment()
+        model = Comment
         fields = [
             'id', 'owner', 'post', 'created_at', 'updated_at', 'content',
             'is_owner', 'profile_id', 'name', 'position', 'profile_image',
+            'title',
         ]
 
 
