@@ -5,7 +5,7 @@ from followers.models import Follower
 from followers.serializers import FollowerSerializer
 
 
-class FollowerList(generics.FollowerCreateAPIView):
+class FollowerList(generics.ListCreateAPIView):
     """
     List Follower or create a Follower if logged in.
     """
