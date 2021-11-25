@@ -1,5 +1,5 @@
 """
-Serializer for Profiles App
+Serializer for Comment App
 """
 from django.contrib.humanize.templatetags.humanize import naturaltime
 from rest_framework import serializers

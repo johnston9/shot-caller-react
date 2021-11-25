@@ -18,7 +18,7 @@ class Scene(models.Model):
     )
     time = models.CharField(max_length=255, blank=False)
     location = models.CharField(max_length=255, blank=False)
-    chatacters = models.CharField(max_length=255, blank=True)
+    characters = models.CharField(max_length=255, blank=True)
     action = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
     shotlist = models.TextField(blank=True)
