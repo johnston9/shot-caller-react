@@ -3,6 +3,7 @@ from django.http import Http404
 from rest_framework import status
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from rest_framework import permissions
 from rest_framework.permissions import IsAuthenticated
 from .models import Scene
 from .serializers import SceneSerializer
@@ -10,7 +11,7 @@ from .serializers import SceneSerializer
 
 class ScenesList(APIView):
     """ List all Scenes """
-    permission_classes = [IsAuthenticated]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
 
     def get(self, request):
         """ View to get all scenes """
