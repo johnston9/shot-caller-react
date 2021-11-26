@@ -18,7 +18,7 @@ class Post(models.Model):
      ]
 
     category_choices = [
-        ('requirements', 'Requirements'), ('suggestions', 'Suggestions'),
+        ('requirements', 'Requirements'), ('workspace', 'Workspace'),
         ('finals', 'Finals'), ('shooting', 'Shooting'), ('info', 'Info'),
     ]
 
@@ -35,19 +35,19 @@ class Post(models.Model):
     title = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
     image1 = models.ImageField(
-        upload_to='images/', default='../default_profile_d6u3um', blank=True
+        upload_to='images/', blank=True
     )
     image2 = models.ImageField(
-        upload_to='images/', default='../default_profile_d6u3um', blank=True
+        upload_to='images/', blank=True
     )
     image3 = models.ImageField(
-        upload_to='images/', default='../default_profile_d6u3um', blank=True
+        upload_to='images/', blank=True
     )
     image4 = models.ImageField(
-        upload_to='images/', default='../default_profile_d6u3um', blank=True
+        upload_to='images/', blank=True
     )
     image5 = models.ImageField(
-        upload_to='images/', default='../default_profile_d6u3um', blank=True
+        upload_to='images/', blank=True
     )
 
     class Meta:
