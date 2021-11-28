@@ -25,6 +25,9 @@ class PostList(generics.ListCreateAPIView):
         DjangoFilterBackend,
     ]
     filterset_fields = [
+        'scene',
+        'departments',
+        'category',
         'owner__followed__owner__profile',
         'likes__owner__profile',
         'owner__profile',
