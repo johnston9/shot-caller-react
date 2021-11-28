@@ -66,20 +66,19 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
+    'http://localhost:3000'
     'localhost',
 ]
 
 if 'CLIENT_ORIGIN' in os.environ:
     CORS_ALLOWED_ORIGINS = [
         os.environ.get('CLIENT_ORIGIN'),
+        os.environ.get('CLIENT_ORIGIN_DEV'),
     ]
-else:
-    CORS_ALLOWED_ORIGIN_REGEXES = [
-        'https://3000-amaranth-firefly-no299baq.ws-eu17.gitpod.io/',
-        'https://3000-amaranth-firefly-no299baq.ws-eu18.gitpod.io/',
-        'https://3000-amaranth-firefly-no299baq.ws-eu19.gitpod.io/',
-        r"^https://.*\.gitpod\.io$",
-    ]
+
+CORS_ALLOWED_ORIGIN_REGEXES = [
+    r"^https://.*\.gitpod\.io$",
+]
 
 # if 'CLIENT_ORIGIN' in os.environ:
 #     CORS_ALLOWED_ORIGINS = [
