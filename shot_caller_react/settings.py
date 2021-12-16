@@ -66,7 +66,7 @@ DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
-    'http://localhost:3000'
+    'http://localhost:8000',
     'localhost',
 ]
 
@@ -125,6 +125,7 @@ INSTALLED_APPS = [
     'comments',
     'likes',
     'followers',
+    'archives',
 ]
 
 SITE_ID = 1

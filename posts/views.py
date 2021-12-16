@@ -17,6 +17,7 @@ class PostList(generics.ListCreateAPIView):
     queryset = Post.objects.annotate(
         comments_count=Count('comment', distinct=True),
         likes_count=Count('likes', distinct=True),
+        archives_count=Count('archives', distinct=True),
     ).order_by('-created_at')
 
     filter_backends = [
@@ -30,6 +31,7 @@ class PostList(generics.ListCreateAPIView):
         'category',
         'owner__followed__owner__profile',
         'likes__owner__profile',
+        'archives__owner__profile',
         'owner__profile',
     ]
     search_fields = [
@@ -55,6 +57,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.annotate(
         comments_count=Count('comment', distinct=True),
         likes_count=Count('likes', distinct=True),
+        archives_count=Count('archives', distinct=True),
     ).order_by('-created_at')
 
 

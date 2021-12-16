@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Post
 from likes.models import Like
+from archives.models import Archive
 
 
 class PostSerializer(serializers.ModelSerializer):
@@ -14,6 +15,7 @@ class PostSerializer(serializers.ModelSerializer):
     like_id = serializers.SerializerMethodField()
     comments_count = serializers.ReadOnlyField()
     likes_count = serializers.ReadOnlyField()
+    archive_id = serializers.SerializerMethodField()
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -42,12 +44,22 @@ class PostSerializer(serializers.ModelSerializer):
             return like.id if like else None
         return None
 
+    def get_archive_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            archive = Archive.objects.filter(
+                owner=user, post=obj
+            ).first()
+            print(archive)
+            return archive.id if archive else None
+        return None
+
     class Meta:
         model = Post
         fields = [
             'id', 'owner', 'scene', 'departments', 'category',
             'created_at', 'updated_at', 'title', 'like_id',
-            'content', 'is_owner', 'profile_id',
+            'content', 'is_owner', 'profile_id', 'archive_id',
             'name', 'position', 'profile_image',
             'image1', 'image2', 'image3', 'image4', 'image5',
             'comments_count', 'likes_count',
