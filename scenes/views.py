@@ -9,7 +9,9 @@ class ScenesList(generics.ListCreateAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = SceneSerializer
     queryset = Scene.objects.all()
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    
+    filter_backends = [filters.SearchFilter]
+    search_fields = ['number', 'location', 'title']
 
 
 class SceneDetail(generics.RetrieveUpdateDestroyAPIView):
