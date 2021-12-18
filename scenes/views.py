@@ -20,6 +20,6 @@ class SceneDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Get and put Scene
     """
-    permission_classes = [IsOwnerOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = SceneSerializer
     queryset = Scene.objects.all()
