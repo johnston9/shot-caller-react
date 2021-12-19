@@ -10,9 +10,16 @@ class ScenesList(generics.ListCreateAPIView):
     """ List all Scenes """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = SceneSerializer
-    queryset = Scene.objects.all()
-    
-    filter_backends = [filters.SearchFilter]
+    queryset = Scene.objects.all().order_by('act')
+
+    filter_backends = [
+        filters.SearchFilter,
+        DjangoFilterBackend,
+        filters.OrderingFilter,
+        ]
+
+    filterset_fields = ['act']
+
     search_fields = ['number', 'location', 'title']
 
 
