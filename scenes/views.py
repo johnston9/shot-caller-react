@@ -10,7 +10,7 @@ class ScenesList(generics.ListCreateAPIView):
     """ List all Scenes """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = SceneSerializer
-    queryset = Scene.objects.all().order_by('act')
+    queryset = Scene.objects.all().order_by('number')
 
     filter_backends = [
         filters.SearchFilter,

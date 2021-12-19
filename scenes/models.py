@@ -24,19 +24,19 @@ class Scene(models.Model):
     ]
     number = models.IntegerField(blank=False)
     act = models.CharField(
-        max_length=32, choices=ACT_CHOICES, default='one'
+        max_length=32, choices=ACT_CHOICES, default='one', blank=False
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=255, blank=True)
     int_ext = models.CharField(
-        max_length=32, choices=EXT_INT_CHOICES, default='int'
+        max_length=32, choices=EXT_INT_CHOICES, default='int', blank=True
     )
     day_night = models.CharField(
-        max_length=32, choices=DAY_NIGHT_CHOICES, default='day'
+        max_length=32, choices=DAY_NIGHT_CHOICES, default='day', blank=True
     )
-    time = models.CharField(max_length=255, blank=False)
-    location = models.CharField(max_length=255, blank=False)
+    time = models.CharField(max_length=255, blank=True)
+    location = models.CharField(max_length=255, blank=True)
     characters = models.CharField(max_length=255, blank=True)
     action = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
