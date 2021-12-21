@@ -24,6 +24,7 @@ class Post(models.Model):
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     scene = models.ForeignKey(Scene, on_delete=models.CASCADE)
+    number = models.IntegerField(blank=True)
     departments = models.CharField(
         max_length=32, choices=department_choices, default='camera'
     )
