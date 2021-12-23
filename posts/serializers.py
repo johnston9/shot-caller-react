@@ -1,7 +1,8 @@
+""" Posts serializer """
 from rest_framework import serializers
-from .models import Post
 from likes.models import Like
 from archives.models import Archive
+from .models import Post
 
 
 class PostSerializer(serializers.ModelSerializer):

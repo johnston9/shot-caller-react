@@ -59,7 +59,7 @@ class PostDetail(generics.RetrieveUpdateDestroyAPIView):
         comments_count=Count('comment', distinct=True),
         likes_count=Count('likes', distinct=True),
         archives_count=Count('archives', distinct=True),
-    ).order_by('-created_at')
+    )
 
 
 # """ Post views """

@@ -1,13 +1,11 @@
-""" Posts Model """
+""" Departments Model """
 from django.db import models
 from django.contrib.auth.models import User
-from scenes.models import Scene
 
 
-class Post(models.Model):
+class Department(models.Model):
     """
-    Post model, related to 'owner', i.e. a User instance.
-    Related to scene.
+    Department model, related to 'owner', i.e. a User instance.
     """
     department_choices = [
         ('camera', 'Camera'), ('script', 'Script'), ('art', 'Art'),
@@ -18,19 +16,9 @@ class Post(models.Model):
         ('electric', 'Electric/Grip'),
      ]
 
-    category_choices = [
-        ('requirements', 'Requirements'), ('workspace', 'Workspace'),
-        ('finals', 'Finals'), ('shooting', 'Shooting'), ('info', 'Info'),
-    ]
-
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
-    scene = models.ForeignKey(Scene, on_delete=models.CASCADE)
-    number = models.IntegerField(blank=True, default='1')
     departments = models.CharField(
         max_length=32, choices=department_choices, default='camera'
-    )
-    category = models.CharField(
-        max_length=32, choices=category_choices, default='info'
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -56,4 +44,4 @@ class Post(models.Model):
         ordering = ['-created_at']
 
     def __str__(self):
-        return f'{self.scene} {self.title}'
+        return f'{self.owner} {self.title}'
