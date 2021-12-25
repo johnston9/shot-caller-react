@@ -127,6 +127,7 @@ INSTALLED_APPS = [
     'followers',
     'archives',
     'departments',
+    'schedule',
 ]
 
 SITE_ID = 1
