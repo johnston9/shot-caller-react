@@ -9,6 +9,7 @@ class DaySerializer(serializers.ModelSerializer):
     """
     Serializer class for Schedule App Day model
     """
+    date = serializers.DateField(format="%d %m %Y", input_formats=['%d %m %Y'])
 
     class Meta:
         """
