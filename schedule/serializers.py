@@ -17,6 +17,7 @@ class DaySerializer(serializers.ModelSerializer):
         model = Day
         fields = [
             'day', 'date', 'scene1', 'scene2', 'scene3', 'scene4', 'scene5',
-            'scene6', 'scene7', 'scene8', 'scene9', 'scene10', 'location1',
-            'location2', 'location3', 'location4', 'location5',
+            'scene6', 'scene7', 'scene8', 'scene9', 'scene10', 'scene11',
+            'scene12', 'location1', 'location2', 'location3', 'location4',
+            'location5', 'location6',
             ]

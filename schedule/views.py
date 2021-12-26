@@ -1,7 +1,6 @@
 """ Views for Schedule App """
 from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
-from shot_caller_react.permissions import IsOwnerOrReadOnly
 from .models import Day
 from .serializers import DaySerializer
 
@@ -21,9 +20,10 @@ class DayList(generics.ListCreateAPIView):
     filterset_fields = ['day', 'date']
 
     search_fields = [
-            'scene1', 'scene2', 'scene3', 'scene4', 'scene5',
-            'scene6', 'scene7', 'scene8', 'scene9', 'scene10', 'location1',
-            'location2', 'location3', 'location4', 'location5',
+            'scene1', 'scene2', 'scene3', 'scene4', 'scene5', 'scene6',
+            'scene7', 'scene8', 'scene9', 'scene10', 'scene11', 'scene12',
+            'location1', 'location2', 'location3', 'location4', 'location5',
+            'location6',
             ]
 
 
