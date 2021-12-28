@@ -18,9 +18,14 @@ class ScenesList(generics.ListCreateAPIView):
         filters.OrderingFilter,
         ]
 
-    filterset_fields = ['act']
+    filterset_fields = ['act', 'location']
 
     search_fields = ['number', 'location', 'title']
+
+    ordering_fields = [
+        'location',
+        'number',
+    ]
 
 
 class SceneDetail(generics.RetrieveUpdateDestroyAPIView):
