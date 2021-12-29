@@ -106,6 +106,8 @@ class ScheduleScene(models.Model):
     background_artists_costumes = models.TextField(blank=True)
     background_artists_calltimes = models.TextField(blank=True)
     background_artists_pickups = models.TextField(blank=True)
+    new_content = models.TextField(blank=True)
+    background_artists_pickups = models.TextField(blank=True)
 
     class Meta:
         ordering = ['day_order_number']
