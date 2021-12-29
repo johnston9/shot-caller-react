@@ -23,12 +23,13 @@ class Scene(models.Model):
         ('three', 'Three'),
     ]
     number = models.IntegerField(blank=False)
+    title = models.CharField(max_length=255, blank=True)
     act = models.CharField(
         max_length=32, choices=ACT_CHOICES, default='one', blank=False
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
-    title = models.CharField(max_length=255, blank=True)
+    location = models.CharField(max_length=255, blank=True)
     int_ext = models.CharField(
         max_length=32, choices=EXT_INT_CHOICES, default='int', blank=True
     )
@@ -36,9 +37,9 @@ class Scene(models.Model):
         max_length=32, choices=DAY_NIGHT_CHOICES, default='day', blank=True
     )
     time = models.CharField(max_length=255, blank=True)
-    location = models.CharField(max_length=255, blank=True)
     filming_location = models.CharField(max_length=255, blank=True)
-    shooting_date = models.DateField()
+    shooting_date = models.DateField(blank=True, null=True)
+    info = models.CharField(max_length=255, blank=True)
     character1 = models.TextField(blank=True)
     character1_costume = models.TextField(blank=True)
     character2 = models.TextField(blank=True)
@@ -65,11 +66,9 @@ class Scene(models.Model):
     background_artists_costumes = models.TextField(blank=True)
     action = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
-    shotlist = models.TextField(blank=True)
     storyboard = models.ImageField(
         upload_to='images/', default='', blank=True
     )
-    info = models.CharField(max_length=255, blank=True)
     image = models.ImageField(
         upload_to='images/', default='', blank=True
     )

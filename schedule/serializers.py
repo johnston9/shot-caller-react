@@ -30,7 +30,8 @@ class ScheduleSceneSerializer(serializers.ModelSerializer):
     """
     Serializer class for Schedule App ScheduleScene model
     """
-    date = serializers.DateField(format="%d %b %Y", input_formats=['%d %b %Y'])
+    date = serializers.DateField(
+        format="%d %b %Y", input_formats=['%d %b %Y', '%d/%m/%Y' ])
 
     class Meta:
         """
@@ -41,7 +42,7 @@ class ScheduleSceneSerializer(serializers.ModelSerializer):
             'id', 'day_id', 'day', 'day_order_number', 'date', 'scene_number',
             'title', 'start_time', 'end_time', 'content', 'location',
             'filming_location', 'int_ext', 'day_night', 'time',
-            'action', 'info', 'image', 'act',
+            'action', 'info', 'act',
             'character1', 'character1_costume', 'character2',
             'character2_costume', 'character3', 'character3_costume',
             'character4', 'character4_costume', 'character5',
