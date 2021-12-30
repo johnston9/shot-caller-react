@@ -44,7 +44,7 @@ class ScheduleScene(models.Model):
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
     day = models.TextField(blank=True)
     day_order_number = models.CharField(max_length=255, blank=True)
-    date = models.DateField(blank=True, null=True )
+    date = models.DateField(blank=True, null=True)
     scene_number = models.TextField(blank=True)
     act = models.TextField(blank=True)
     title = models.TextField(blank=True)
@@ -98,6 +98,14 @@ class ScheduleScene(models.Model):
     character10_costume = models.TextField(blank=True)
     character10_calltime = models.TextField(blank=True)
     character10_pickup = models.TextField(blank=True)
+    character11 = models.TextField(blank=True)
+    character11_costume = models.TextField(blank=True)
+    character11_calltime = models.TextField(blank=True)
+    character11_pickup = models.TextField(blank=True)
+    character12 = models.TextField(blank=True)
+    character12_costume = models.TextField(blank=True)
+    character12_calltime = models.TextField(blank=True)
+    character12_pickup = models.TextField(blank=True)
     other_characters = models.TextField(blank=True)
     other_characters_costumes = models.TextField(blank=True)
     other_characters_calltimes = models.TextField(blank=True)
@@ -107,7 +115,7 @@ class ScheduleScene(models.Model):
     background_artists_calltimes = models.TextField(blank=True)
     background_artists_pickups = models.TextField(blank=True)
     new_content = models.TextField(blank=True)
-    background_artists_pickups = models.TextField(blank=True)
+    new_info = models.TextField(blank=True)
 
     class Meta:
         ordering = ['day_order_number']
