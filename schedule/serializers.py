@@ -30,8 +30,6 @@ class ScheduleSceneSerializer(serializers.ModelSerializer):
     """
     Serializer class for Schedule App ScheduleScene model
     """
-    date = serializers.DateField(
-        format="%d %b %Y", input_formats=['%d %b %Y', '%d/%m/%Y'])
 
     class Meta:
         """
