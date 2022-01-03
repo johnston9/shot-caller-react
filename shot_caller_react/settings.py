@@ -128,6 +128,7 @@ INSTALLED_APPS = [
     'archives',
     'departments',
     'schedule',
+    'characters',
 ]
 
 SITE_ID = 1

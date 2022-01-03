@@ -34,4 +34,5 @@ urlpatterns = [
     path('', include('archives.urls')),
     path('', include('departments.urls')),
     path('', include('schedule.urls')),
+    path('', include('characters.urls')),
 ]
