@@ -47,6 +47,7 @@ class ScheduleScene(models.Model):
     date = models.TextField(blank=True, default="")
     number = models.TextField(blank=True)
     act = models.TextField(blank=True)
+    pages = models.CharField(max_length=255, blank=True)
     title = models.TextField(blank=True)
     start_time = models.TextField(blank=True)
     end_time = models.TextField(blank=True)

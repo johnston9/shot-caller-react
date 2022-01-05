@@ -41,7 +41,7 @@ class ScheduleSceneSerializer(serializers.ModelSerializer):
             'title', 'start_time', 'end_time', 'content', 'location',
             'filming_location', 'int_ext', 'time', 'location_address',
             'action', 'info', 'act', 'new_content', 'new_info', 'day_night',
-            'character1', 'character1_costume', 'character2',
+            'character1', 'character1_costume', 'character2', 'pages',
             'character2_costume', 'character3', 'character3_costume',
             'character4', 'character4_costume', 'character5',
             'character5_costume', 'character6', 'character6_costume',
