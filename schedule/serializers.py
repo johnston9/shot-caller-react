@@ -39,8 +39,8 @@ class ScheduleSceneSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'day_id', 'day', 'day_order_number', 'date', 'number',
             'title', 'start_time', 'end_time', 'content', 'location',
-            'filming_location', 'int_ext', 'day_night', 'time',
-            'action', 'info', 'act', 'new_content', 'new_info',
+            'filming_location', 'int_ext', 'time', 'location_address',
+            'action', 'info', 'act', 'new_content', 'new_info', 'day_night',
             'character1', 'character1_costume', 'character2',
             'character2_costume', 'character3', 'character3_costume',
             'character4', 'character4_costume', 'character5',

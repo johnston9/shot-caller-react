@@ -44,7 +44,7 @@ class ScheduleScene(models.Model):
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
     day = models.TextField(blank=True)
     day_order_number = models.CharField(max_length=255, blank=True)
-    date = models.TextField(blank=True, null=True)
+    date = models.TextField(blank=True, default="")
     number = models.TextField(blank=True)
     act = models.TextField(blank=True)
     title = models.TextField(blank=True)
@@ -53,6 +53,7 @@ class ScheduleScene(models.Model):
     content = models.TextField(blank=True)
     location = models.TextField(blank=True)
     filming_location = models.TextField(blank=True)
+    location_address = models.TextField(blank=True)
     int_ext = models.TextField(blank=True)
     day_night = models.TextField(blank=True)
     time = models.TextField(blank=True)
@@ -121,4 +122,4 @@ class ScheduleScene(models.Model):
         ordering = ['day_order_number']
 
     def __str__(self):
-        return f'{self.scene_number}'
+        return f'{self.number}'
