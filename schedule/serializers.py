@@ -65,5 +65,5 @@ class ScheduleSceneSerializer(serializers.ModelSerializer):
             'character11_calltime', 'character11_pickup',
             'character12_calltime', 'character12_pickup',
             'other_characters_calltimes', 'other_characters_pickups',
-            'background_artists_calltimes', 'background_artists_costumes',
+            'background_artists_calltimes', 'background_artists_pickups',
             ]
