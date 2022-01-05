@@ -20,7 +20,7 @@ class SceneSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'number', 'act', 'created_at', 'updated_at', 'title',
             'int_ext', 'day_night', 'time', 'location', 'filming_location',
-            'action', 'content', 'storyboard', 'info', 'image',
+            'action', 'content', 'storyboard', 'info', 'image', 'pages',
             'character1', 'character1_costume', 'character2',
             'character2_costume', 'character3', 'character3_costume',
             'character4', 'character4_costume', 'character5',

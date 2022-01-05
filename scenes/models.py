@@ -36,6 +36,7 @@ class Scene(models.Model):
     day_night = models.CharField(
         max_length=32, choices=DAY_NIGHT_CHOICES, default='day', blank=True
     )
+    pages = models.CharField(max_length=255, blank=True)
     time = models.CharField(max_length=255, blank=True)
     filming_location = models.CharField(max_length=255, blank=True)
     shooting_date = models.DateField(blank=True, null=True)
