@@ -129,6 +129,7 @@ INSTALLED_APPS = [
     'departments',
     'schedule',
     'characters',
+    'shotlists',
 ]
 
 SITE_ID = 1

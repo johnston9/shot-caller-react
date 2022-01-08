@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class RunserverConfig(AppConfig):
+class ShotlistsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'runserver'
+    name = 'shotlists'

@@ -53,7 +53,7 @@ class ScheduleSceneList(generics.ListCreateAPIView):
     filterset_fields = ['day', 'date', 'day_id']
 
     search_fields = [
-            'scene_number', 'location', 'filming_location',]
+            'scene_number', 'location', 'filming_location', ]
 
 
 class ScheduleSceneDetail(generics.RetrieveUpdateDestroyAPIView):

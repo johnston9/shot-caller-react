@@ -24,7 +24,8 @@ urlpatterns = [
     # our logout route has to be above the default one to be matched first
     path('dj-rest-auth/logout/', logout_route),
     path('dj-rest-auth/', include('dj_rest_auth.urls')),
-    path('dj-rest-auth/registration/', include('dj_rest_auth.registration.urls')),
+    path('dj-rest-auth/registration/', include(
+        'dj_rest_auth.registration.urls')),
     path('', include('profiles.urls')),
     path('', include('scenes.urls')),
     path('', include('posts.urls')),
@@ -35,4 +36,5 @@ urlpatterns = [
     path('', include('departments.urls')),
     path('', include('schedule.urls')),
     path('', include('characters.urls')),
+    path('', include('shotlists.urls')),
 ]
