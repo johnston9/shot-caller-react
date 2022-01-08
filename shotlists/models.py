@@ -25,6 +25,9 @@ class Shotlist(models.Model):
     script_ref = models.TextField(blank=True)
     storyboard_refs = models.TextField(blank=True)
     audio = models.TextField(blank=True)
+    image = models.ImageField(
+        upload_to='images/', blank=True
+    )
 
     class Meta:
         ordering = ['scene_number', 'shot_number']
