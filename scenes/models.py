@@ -39,7 +39,7 @@ class Scene(models.Model):
     pages = models.CharField(max_length=255, blank=True)
     time = models.CharField(max_length=255, blank=True)
     filming_location = models.CharField(max_length=255, blank=True)
-    shooting_date = models.DateField(blank=True, null=True)
+    shooting_date = models.CharField(max_length=255, blank=True, default="")
     info = models.CharField(max_length=255, blank=True)
     character1 = models.TextField(blank=True)
     character1_costume = models.TextField(blank=True)
@@ -71,6 +71,7 @@ class Scene(models.Model):
     background_artists_costumes = models.TextField(blank=True)
     action = models.CharField(max_length=255, blank=True)
     content = models.TextField(blank=True)
+    workspace_guide = models.TextField(blank=True)
     storyboard = models.ImageField(
         upload_to='images/', default='', blank=True
     )

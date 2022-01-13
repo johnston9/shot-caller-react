@@ -15,7 +15,7 @@ class Post(models.Model):
         ('location', 'Location'), ('sound', 'Sound'),
         ('casting', 'Casting'), ('post', 'Post/VSF'),
         ('production', 'Production'), ('stunts', 'Stunts'),
-        ('electric', 'Electric/Grip'),
+        ('electric', 'Electric/Grip'), ('universal', 'Universal'),
      ]
 
     category_choices = [
@@ -27,10 +27,10 @@ class Post(models.Model):
     scene = models.ForeignKey(Scene, on_delete=models.CASCADE)
     number = models.IntegerField(blank=True, default='1')
     departments = models.CharField(
-        max_length=32, choices=department_choices, default='camera'
+        max_length=32, choices=department_choices, default='universal'
     )
     category = models.CharField(
-        max_length=32, choices=category_choices, default='info'
+        max_length=32, choices=category_choices, default=''
     )
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)

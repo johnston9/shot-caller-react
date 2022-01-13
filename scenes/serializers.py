@@ -9,8 +9,6 @@ class SceneSerializer(serializers.ModelSerializer):
     """
     Serializer class for Scene App
     """
-    shooting_date = serializers.DateField(
-        format="%d %b %Y", input_formats=['%d %b %Y'])
 
     class Meta:
         """
@@ -31,4 +29,5 @@ class SceneSerializer(serializers.ModelSerializer):
             'character11_costume', 'character12', 'character12_costume',
             'background_artists', 'background_artists_costumes',
             'other_characters', 'other_characters_costumes', 'shooting_date',
+            'workspace_guide',
         ]
