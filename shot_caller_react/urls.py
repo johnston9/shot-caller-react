@@ -37,4 +37,5 @@ urlpatterns = [
     path('', include('schedule.urls')),
     path('', include('characters.urls')),
     path('', include('shotlists.urls')),
+    path('', include('moodshots.urls')),
 ]
