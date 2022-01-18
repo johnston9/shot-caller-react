@@ -45,8 +45,8 @@ class Character(models.Model):
     costume7_image = models.ImageField(
         upload_to='images/', blank=True
     )
-    costume8 = models.TextField(blank=True)
-    costume8_image = models.ImageField(
+    makeup = models.TextField(blank=True)
+    makeup_image = models.ImageField(
         upload_to='images/', blank=True
     )
 

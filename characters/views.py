@@ -7,7 +7,7 @@ from .serializers import CharacterSerializer
 
 class CharacterList(generics.ListCreateAPIView):
     """
-    List Character or create a Characte if logged in.
+    List Character or create a Character if logged in.
     """
     serializer_class = CharacterSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
@@ -20,7 +20,7 @@ class CharacterList(generics.ListCreateAPIView):
 
     filterset_fields = ['role']
 
-    search_fields = ['role',]
+    search_fields = ['role']
 
 
 class CharacterDetail(generics.RetrieveUpdateDestroyAPIView):

@@ -131,7 +131,8 @@ INSTALLED_APPS = [
     'characters',
     'shotlists',
     'moodshots',
-]
+    'locations',
+    ]
 
 SITE_ID = 1
 

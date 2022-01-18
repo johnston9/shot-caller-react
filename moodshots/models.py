@@ -1,6 +1,7 @@
 """ Moodshots Model """
 from django.db import models
 from django.contrib.auth.models import User
+from scenes.models import Scene
 
 
 class Moodshot(models.Model):
