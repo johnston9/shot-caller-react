@@ -1,7 +1,6 @@
 """ Generics views for the Moodshots app """
 from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
-from shot_caller_react.permissions import IsOwnerOrReadOnly
 from .models import Moodshot
 from .serializers import MoodshotSerializer
 
