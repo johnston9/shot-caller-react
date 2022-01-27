@@ -46,5 +46,5 @@ class MoodshotDetail(generics.RetrieveUpdateDestroyAPIView):
     Retrieve a Moodshot and edit or delete it if you own it.
     """
     serializer_class = MoodshotSerializer
-    permission_classes = [IsOwnerOrReadOnly]
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     queryset = Moodshot.objects.all()
