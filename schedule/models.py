@@ -23,12 +23,8 @@ class Day(models.Model):
     scene10 = models.TextField(blank=True)
     scene11 = models.TextField(blank=True)
     scene12 = models.TextField(blank=True)
+    xtra_scenes = models.TextField(blank=True)
     location1 = models.TextField(blank=True)
-    location2 = models.TextField(blank=True)
-    location3 = models.TextField(blank=True)
-    location4 = models.TextField(blank=True)
-    location5 = models.TextField(blank=True)
-    location6 = models.TextField(blank=True)
 
     class Meta:
         ordering = ['day']
