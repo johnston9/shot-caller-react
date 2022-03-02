@@ -21,10 +21,7 @@ class DayList(generics.ListCreateAPIView):
 
     filterset_fields = ['day', 'date']
 
-    search_fields = [
-            'scene1', 'scene2', 'scene3', 'scene4', 'scene5', 'scene6',
-            'scene7', 'scene8', 'scene9', 'scene10', 'scene11', 'scene12',
-            'location1']
+    search_fields = ['day']
 
 
 class DayDetail(generics.RetrieveUpdateDestroyAPIView):
