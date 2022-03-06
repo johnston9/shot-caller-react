@@ -39,4 +39,5 @@ urlpatterns = [
     path('', include('shotlists.urls')),
     path('', include('moodshots.urls')),
     path('', include('locations.urls')),
+    path('', include('callsheets.urls')),
 ]
