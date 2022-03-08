@@ -1,6 +1,5 @@
 """ Schedule Model """
 from django.db import models
-# from scenes.models import Scene
 
 
 class Day(models.Model):

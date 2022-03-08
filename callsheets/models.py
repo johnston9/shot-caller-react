@@ -1,6 +1,6 @@
-""" CrewInfo Model """
+""" Callsheet Models """
 from django.db import models
-# from scenes.models import Scene
+from schedule.models import Day
 
 
 class CrewInfo(models.Model):
@@ -8,6 +8,7 @@ class CrewInfo(models.Model):
     CrewInfo Model
     """
 
+    total_shoot_days = models.CharField(max_length=255, blank=True)
     production_name = models.CharField(max_length=255, blank=True)
     production_company = models.CharField(max_length=255, blank=True)
     company_phone = models.CharField(max_length=255, blank=True)
@@ -209,3 +210,44 @@ class CrewInfo(models.Model):
 
     def __str__(self):
         return f'{self.production_name}'
+
+
+class Callsheet(models.Model):
+    """
+    Callsheet Model
+    """
+
+    day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
+    day = models.TextField(blank=True)
+    date = models.TextField(blank=True, default="")
+    unit_call = models.CharField(max_length=255, blank=True)
+    talent_call = models.CharField(max_length=255, blank=True)
+    shoot_call = models.CharField(max_length=255, blank=True)
+    breakfast = models.CharField(max_length=255, blank=True)
+    lunch = models.CharField(max_length=255, blank=True)
+    wrap = models.CharField(max_length=255, blank=True)
+    basecamp_address = models.TextField(blank=True)
+    basecamp_parking_n_notes = models.TextField(blank=True)
+    location_1_address = models.TextField(blank=True)
+    location_2_address = models.TextField(blank=True)
+    location_3_address = models.TextField(blank=True)
+    location_4_address = models.TextField(blank=True)
+    location_5_address = models.TextField(blank=True)
+    location_1_parking_n_notes = models.TextField(blank=True)
+    location_2_parking_n_notes = models.TextField(blank=True)
+    location_3_parking_n_notes = models.TextField(blank=True)
+    location_4_parking_n_notes = models.TextField(blank=True)
+    location_5_parking_n_notes = models.TextField(blank=True)
+    nearest_hospital = models.TextField(blank=True)
+    weather_para = models.CharField(max_length=255, blank=True)
+    important_info = models.TextField(blank=True)
+    transport_info = models.TextField(blank=True)
+    department_info = models.TextField(blank=True)
+    company_phone = models.CharField(max_length=255, blank=True)
+    company_email = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ['day']
+
+    def __str__(self):
+        return f'{self.day}'

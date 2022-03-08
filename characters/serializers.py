@@ -9,9 +9,9 @@ class CharacterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Character
         fields = [
-            'id', 'role', 'actor', 'pickup_address', 'pickup_address_2',
-            'make_up_time', 'commute_time', 'email', 'mobile',
-            'agent', 'diet', 'requirements', 'costume1',
+            'number', 'id', 'role', 'actor', 'pickup_address',
+            'pickup_address_2', 'make_up_time', 'commute_time',
+            'email', 'mobile', 'agent', 'diet', 'requirements', 'costume1',
             'costume2', 'costume3', 'costume4', 'makeup',
             'costume5', 'costume6', 'costume7', 'costume1_image',
             'costume2_image', 'costume3_image', 'costume4_image',
