@@ -292,6 +292,8 @@ class Castcall(models.Model):
     """
 
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
+    day = models.CharField(max_length=255, blank=True)
+    date = models.CharField(max_length=255, blank=True)
     cast_number = models.CharField(max_length=255, blank=True)
     role = models.CharField(max_length=255, blank=True)
     artist = models.CharField(max_length=255, blank=True)

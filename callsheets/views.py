@@ -73,7 +73,7 @@ class CastcallList(generics.ListCreateAPIView):
         filters.OrderingFilter,
         ]
 
-    filterset_fields = ['day', 'date', 'role']
+    filterset_fields = ['day_id', 'role']
 
     search_fields = ['day', 'date', 'role']
 
