@@ -9,4 +9,6 @@ urlpatterns = [
     path('crewinfo/<int:pk>/', views.CrewInfoDetail.as_view()),
     path('callsheets/', views.CallsheetList.as_view()),
     path('callsheets/<int:pk>/', views.CallsheetDetail.as_view()),
+    path('castcalls/', views.CastcallList.as_view()),
+    path('castcalls/<int:pk>/', views.CastcallDetail.as_view()),
 ]

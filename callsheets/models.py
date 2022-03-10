@@ -284,3 +284,27 @@ class Callsheet(models.Model):
 
     def __str__(self):
         return f'{self.day}'
+
+
+class Castcall(models.Model):
+    """
+    Castcall Model
+    """
+
+    day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
+    cast_number = models.CharField(max_length=255, blank=True)
+    role = models.CharField(max_length=255, blank=True)
+    artist = models.CharField(max_length=255, blank=True)
+    contact = models.CharField(max_length=255, blank=True)
+    swf = models.CharField(max_length=255, blank=True)
+    pickup = models.CharField(max_length=255, blank=True)
+    call = models.TextField(blank=True)
+    hmw = models.TextField(blank=True)
+    on_set = models.TextField(blank=True)
+    inst = models.TextField(blank=True)
+
+    class Meta:
+        ordering = ['cast_number']
+
+    def __str__(self):
+        return f'{self.role}'

@@ -5,6 +5,8 @@ from .models import CrewInfo
 from .serializers import CrewInfoSerializer
 from .models import Callsheet
 from .serializers import CallsheetSerializer
+from .models import Castcall
+from .serializers import CastcallSerializer
 
 
 class CrewInfoList(generics.ListCreateAPIView):
@@ -57,3 +59,29 @@ class CallsheetDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = CrewInfoSerializer
     queryset = Callsheet.objects.all()
+
+
+class CastcallList(generics.ListCreateAPIView):
+    """ List all Castcalls """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = CastcallSerializer
+    queryset = Castcall.objects.all()
+
+    filter_backends = [
+        filters.SearchFilter,
+        DjangoFilterBackend,
+        filters.OrderingFilter,
+        ]
+
+    filterset_fields = ['day', 'date', 'role']
+
+    search_fields = ['day', 'date', 'role']
+
+
+class CastcallDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Get, put and delete Castcalls
+    """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = CastcallSerializer
+    queryset = Castcall.objects.all()
