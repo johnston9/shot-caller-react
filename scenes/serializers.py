@@ -18,8 +18,8 @@ class SceneSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'number', 'act', 'created_at', 'updated_at', 'title',
             'int_ext', 'day_night', 'time', 'location', 'filming_location',
-            'action', 'content', 'storyboard', 'info', 'image', 'pages',
-            'character1', 'character1_costume', 'character2',
+            'action', 'equip_set_props', 'dramatic_day', 'department_info',
+            'image', 'pages', 'character1', 'character1_costume', 'character2',
             'character2_costume', 'character3', 'character3_costume',
             'character4', 'character4_costume', 'character5',
             'character5_costume', 'character6', 'character6_costume',
@@ -29,5 +29,5 @@ class SceneSerializer(serializers.ModelSerializer):
             'character11_costume', 'character12', 'character12_costume',
             'background_artists', 'background_artists_costumes',
             'other_characters', 'other_characters_costumes', 'shooting_date',
-            'workspace_guide',
+            'workspace_guide', 'storyboard',
         ]

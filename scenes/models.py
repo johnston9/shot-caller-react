@@ -30,6 +30,9 @@ class Scene(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     location = models.CharField(max_length=255, blank=True)
+    dramatic_day = models.CharField(max_length=255, blank=True)
+    department_info = models.TextField(blank=True)
+    equip_set_props = models.TextField(blank=True)
     int_ext = models.CharField(
         max_length=32, choices=EXT_INT_CHOICES, default='int', blank=True
     )
@@ -40,7 +43,7 @@ class Scene(models.Model):
     time = models.CharField(max_length=255, blank=True)
     filming_location = models.CharField(max_length=255, blank=True)
     shooting_date = models.CharField(max_length=255, blank=True, default="")
-    info = models.CharField(max_length=255, blank=True)
+    action = models.CharField(max_length=255, blank=True)
     character1 = models.TextField(blank=True)
     character1_costume = models.TextField(blank=True)
     character2 = models.TextField(blank=True)
@@ -69,8 +72,6 @@ class Scene(models.Model):
     other_characters_costumes = models.TextField(blank=True)
     background_artists = models.TextField(blank=True)
     background_artists_costumes = models.TextField(blank=True)
-    action = models.CharField(max_length=255, blank=True)
-    content = models.TextField(blank=True)
     workspace_guide = models.TextField(blank=True)
     storyboard = models.ImageField(
         upload_to='images/', default='', blank=True
