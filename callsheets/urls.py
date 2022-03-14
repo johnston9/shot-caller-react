@@ -11,4 +11,6 @@ urlpatterns = [
     path('callsheets/<int:pk>/', views.CallsheetDetail.as_view()),
     path('castcalls/', views.CastcallList.as_view()),
     path('castcalls/<int:pk>/', views.CastcallDetail.as_view()),
+    path('backgroundcalls/', views.BackgroundcallList.as_view()),
+    path('backgroundcalls/<int:pk>/', views.BackgroundcallDetail.as_view()),
 ]

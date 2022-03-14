@@ -310,3 +310,25 @@ class Castcall(models.Model):
 
     def __str__(self):
         return f'{self.role}'
+
+
+class Backgroundcall(models.Model):
+    """
+    Backgroundcall Model
+    """
+
+    day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
+    day = models.CharField(max_length=255, blank=True)
+    date = models.CharField(max_length=255, blank=True)
+    qty = models.CharField(max_length=255, blank=True)
+    type = models.CharField(max_length=255, blank=True)
+    call = models.CharField(max_length=255, blank=True)
+    scenes = models.CharField(max_length=255, blank=True)
+    set = models.CharField(max_length=255, blank=True)
+    costumes = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ['call']
+
+    def __str__(self):
+        return f'{self.type}'

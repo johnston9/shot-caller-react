@@ -7,6 +7,8 @@ from .models import Callsheet
 from .serializers import CallsheetSerializer
 from .models import Castcall
 from .serializers import CastcallSerializer
+from .models import Backgroundcall
+from .serializers import BackgroundcallSerializer
 
 
 class CrewInfoList(generics.ListCreateAPIView):
@@ -85,3 +87,29 @@ class CastcallDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = CastcallSerializer
     queryset = Castcall.objects.all()
+
+
+class BackgroundcallList(generics.ListCreateAPIView):
+    """ List all Backgroundcalls """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = BackgroundcallSerializer
+    queryset = Backgroundcall.objects.all()
+
+    filter_backends = [
+        filters.SearchFilter,
+        DjangoFilterBackend,
+        filters.OrderingFilter,
+        ]
+
+    filterset_fields = ['day_id', 'type']
+
+    search_fields = ['day', 'date', 'type']
+
+
+class BackgroundcallDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Get, put and delete Backgroundcalls
+    """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = BackgroundcallSerializer
+    queryset = Backgroundcall.objects.all()
