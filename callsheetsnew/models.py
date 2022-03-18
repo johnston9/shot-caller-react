@@ -1,11 +1,11 @@
-""" Callsheet Models """
+""" Callsheetnew Models """
 from django.db import models
 from schedule.models import Day
 
 
-class CrewInfo(models.Model):
+class CrewInfonew(models.Model):
     """
-    CrewInfo Model
+    CrewInfonew Model
     """
 
     total_shoot_days = models.CharField(max_length=255, blank=True)
@@ -408,9 +408,9 @@ class CrewInfo(models.Model):
         return f'{self.production_name}'
 
 
-class Callsheet(models.Model):
+class Callsheetnew(models.Model):
     """
-    Callsheet Model
+    Callsheetnew Model
     """
 
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
@@ -456,9 +456,9 @@ class Callsheet(models.Model):
         return f'{self.day}'
 
 
-class Castcall(models.Model):
+class Castcallnew(models.Model):
     """
-    Castcall Model
+    Castcallnew Model
     """
 
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
@@ -482,9 +482,9 @@ class Castcall(models.Model):
         return f'{self.role}'
 
 
-class Backgroundcall(models.Model):
+class Backgroundcallnew(models.Model):
     """
-    Backgroundcall Model
+    Backgroundcallnew Model
     """
 
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)

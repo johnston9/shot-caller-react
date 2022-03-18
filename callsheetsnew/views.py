@@ -1,21 +1,21 @@
 """ Views for Callsheet App """
 from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
-from .models import CrewInfo
-from .serializers import CrewInfoSerializer
-from .models import Callsheet
-from .serializers import CallsheetSerializer
-from .models import Castcall
-from .serializers import CastcallSerializer
-from .models import Backgroundcall
-from .serializers import BackgroundcallSerializer
+from .models import CrewInfonew
+from .serializers import CrewInfonewSerializer
+from .models import Callsheetnew
+from .serializers import CallsheetnewSerializer
+from .models import Castcallnew
+from .serializers import CastcallnewSerializer
+from .models import Backgroundcallnew
+from .serializers import BackgroundcallnewSerializer
 
 
-class CrewInfoList(generics.ListCreateAPIView):
+class CrewInfonewList(generics.ListCreateAPIView):
     """ List all Crew info """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = CrewInfoSerializer
-    queryset = CrewInfo.objects.all()
+    serializer_class = CrewInfonewSerializer
+    queryset = CrewInfonew.objects.all()
 
     filter_backends = [
         filters.SearchFilter,
@@ -28,20 +28,20 @@ class CrewInfoList(generics.ListCreateAPIView):
     search_fields = ['production_name']
 
 
-class CrewInfoDetail(generics.RetrieveUpdateDestroyAPIView):
+class CrewInfonewDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Get, put and delete CrewInfo
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = CrewInfoSerializer
-    queryset = CrewInfo.objects.all()
+    serializer_class = CrewInfonewSerializer
+    queryset = CrewInfonew.objects.all()
 
 
-class CallsheetList(generics.ListCreateAPIView):
+class CallsheetnewList(generics.ListCreateAPIView):
     """ List all Callsheets """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = CallsheetSerializer
-    queryset = Callsheet.objects.all()
+    serializer_class = CallsheetnewSerializer
+    queryset = Callsheetnew.objects.all()
 
     filter_backends = [
         filters.SearchFilter,
@@ -54,20 +54,20 @@ class CallsheetList(generics.ListCreateAPIView):
     search_fields = ['day', 'date']
 
 
-class CallsheetDetail(generics.RetrieveUpdateDestroyAPIView):
+class CallsheetnewDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Get, put and delete Callsheet
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = CrewInfoSerializer
-    queryset = Callsheet.objects.all()
+    serializer_class = CrewInfonewSerializer
+    queryset = Callsheetnew.objects.all()
 
 
-class CastcallList(generics.ListCreateAPIView):
+class CastcallnewList(generics.ListCreateAPIView):
     """ List all Castcalls """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = CastcallSerializer
-    queryset = Castcall.objects.all()
+    serializer_class = CastcallnewSerializer
+    queryset = Castcallnew.objects.all()
 
     filter_backends = [
         filters.SearchFilter,
@@ -80,20 +80,20 @@ class CastcallList(generics.ListCreateAPIView):
     search_fields = ['day', 'date', 'role']
 
 
-class CastcallDetail(generics.RetrieveUpdateDestroyAPIView):
+class CastcallnewDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Get, put and delete Castcalls
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = CastcallSerializer
-    queryset = Castcall.objects.all()
+    serializer_class = CastcallnewSerializer
+    queryset = Castcallnew.objects.all()
 
 
-class BackgroundcallList(generics.ListCreateAPIView):
+class BackgroundcallnewList(generics.ListCreateAPIView):
     """ List all Backgroundcalls """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = BackgroundcallSerializer
-    queryset = Backgroundcall.objects.all()
+    serializer_class = BackgroundcallnewSerializer
+    queryset = Backgroundcallnew.objects.all()
 
     filter_backends = [
         filters.SearchFilter,
@@ -106,10 +106,10 @@ class BackgroundcallList(generics.ListCreateAPIView):
     search_fields = ['day', 'date', 'type']
 
 
-class BackgroundcallDetail(generics.RetrieveUpdateDestroyAPIView):
+class BackgroundcallnewDetail(generics.RetrieveUpdateDestroyAPIView):
     """
     Get, put and delete Backgroundcalls
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = BackgroundcallSerializer
-    queryset = Backgroundcall.objects.all()
+    serializer_class = BackgroundcallnewSerializer
+    queryset = Backgroundcallnew.objects.all()

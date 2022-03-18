@@ -128,7 +128,7 @@ INSTALLED_APPS = [
     'archives',
     'departments',
     'schedule',
-    'callsheets',
+    'callsheetsnew',
     'characters',
     'shotlists',
     'moodshots',
