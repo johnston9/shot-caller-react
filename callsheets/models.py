@@ -462,8 +462,8 @@ class Castcall(models.Model):
     """
 
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
-    day = models.CharField(max_length=255, blank=True)
-    date = models.CharField(max_length=255, blank=True)
+    cast_shoot_day = models.CharField(max_length=255, blank=True)
+    cast_shoot_date = models.CharField(max_length=255, blank=True)
     cast_number = models.CharField(max_length=255, blank=True)
     role = models.CharField(max_length=255, blank=True)
     artist = models.CharField(max_length=255, blank=True)
@@ -488,8 +488,8 @@ class Backgroundcall(models.Model):
     """
 
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
-    day = models.CharField(max_length=255, blank=True)
-    date = models.CharField(max_length=255, blank=True)
+    background_shoot_day = models.CharField(max_length=255, blank=True)
+    background_shoot_date = models.CharField(max_length=255, blank=True)
     qty = models.CharField(max_length=255, blank=True)
     type = models.CharField(max_length=255, blank=True)
     call = models.CharField(max_length=255, blank=True)
