@@ -13,7 +13,10 @@ class CrewInfo(models.Model):
     production_company = models.CharField(max_length=255, blank=True)
     company_phone = models.CharField(max_length=255, blank=True)
     company_email = models.CharField(max_length=255, blank=True)
-    company_address = models.TextField(blank=True)
+    company_address_line_1 = models.TextField(blank=True)
+    company_address_line_2 = models.TextField(blank=True)
+    company_address_line_3 = models.TextField(blank=True)
+    company_address_line_4 = models.TextField(blank=True)
     company_logo = models.ImageField(
         upload_to='images/', blank=True
     )
@@ -230,7 +233,6 @@ class CrewInfo(models.Model):
     electric_4_name = models.CharField(max_length=255, blank=True)
     electric_4_email = models.CharField(max_length=255, blank=True)
     electric_4_phone = models.CharField(max_length=255, blank=True)
-    # production_name = models.CharField(max_length=255, blank=True)
     keygrip_name = models.CharField(max_length=255, blank=True)
     keygrip_email = models.CharField(max_length=255, blank=True)
     keygrip_phone = models.CharField(max_length=255, blank=True)
