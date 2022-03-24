@@ -391,7 +391,7 @@ class CrewInfonew(models.Model):
     add_pos_8_name = models.CharField(max_length=255, blank=True)
     add_pos_8_email = models.CharField(max_length=255, blank=True)
     add_pos_8_phone = models.CharField(max_length=255, blank=True)
-    a0dd_pos_9_job = models.CharField(max_length=255, blank=True)
+    add_pos_9_job = models.CharField(max_length=255, blank=True)
     add_pos_9_name = models.CharField(max_length=255, blank=True)
     add_pos_9_email = models.CharField(max_length=255, blank=True)
     add_pos_9_phone = models.CharField(max_length=255, blank=True)
@@ -412,7 +412,7 @@ class Callsheetnew(models.Model):
     """
     Callsheetnew Model
     """
-
+    # INFO
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
     day = models.TextField(blank=True)
     date = models.TextField(blank=True, default="")
@@ -448,6 +448,147 @@ class Callsheetnew(models.Model):
     walkie_channel_camera = models.CharField(max_length=255, blank=True)
     walkie_channel_electric = models.CharField(max_length=255, blank=True)
     walkie_channel_grip = models.CharField(max_length=255, blank=True)
+    # CALLS
+    # production
+    producer_calltime = models.CharField(max_length=255, blank=True)
+    pro_coordinator_calltime = models.CharField(max_length=255, blank=True)
+    travel_coordinator_calltime = models.CharField(max_length=255, blank=True)
+    upm_calltime = models.CharField(max_length=255, blank=True)
+    production_pa_calltime = models.CharField(max_length=255, blank=True)
+    script_supervisor_calltime = models.CharField(max_length=255, blank=True)
+    legal_calltime = models.CharField(max_length=255, blank=True)
+    set_medic_calltime = models.CharField(max_length=255, blank=True)
+    oth_production_pos_1_calltime = models.CharField(
+        max_length=255, blank=True)
+    oth_production_pos_2_calltime = models.CharField(
+        max_length=255, blank=True)
+    oth_production_pos_3_calltime = models.CharField(
+        max_length=255, blank=True)
+    oth_production_pos_4_calltime = models.CharField(
+        max_length=255, blank=True)
+    oth_production_pos_5_calltime = models.CharField(
+        max_length=255, blank=True)
+    # art
+    art_director_calltime = models.CharField(max_length=255, blank=True)
+    art_assistant_calltime = models.CharField(max_length=255, blank=True)
+    set_decorator_calltime = models.CharField(max_length=255, blank=True)
+    set_dresser_calltime = models.CharField(max_length=255, blank=True)
+    lead_man_calltime = models.CharField(max_length=255, blank=True)
+    dresser_calltime = models.CharField(max_length=255, blank=True)
+    prop_master_calltime = models.CharField(max_length=255, blank=True)
+    ass_prop_master_calltime = models.CharField(max_length=255, blank=True)
+    prop_buyer_calltime = models.CharField(max_length=255, blank=True)
+    # camera
+    dop_calltime = models.CharField(max_length=255, blank=True)
+    camera_operator_calltime = models.CharField(max_length=255, blank=True)
+    camera_ass_1_calltime = models.CharField(max_length=255, blank=True)
+    camera_ass_2_calltime = models.CharField(max_length=255, blank=True)
+    dit_calltime = models.CharField(max_length=255, blank=True)
+    steadicam_calltime = models.CharField(max_length=255, blank=True)
+    camera_pa_calltime = models.CharField(max_length=255, blank=True)
+    oth_camera_pos_1_calltime = models.CharField(max_length=255, blank=True)
+    oth_camera_pos_2_calltime = models.CharField(max_length=255, blank=True)
+    oth_camera_pos_3_calltime = models.CharField(max_length=255, blank=True)
+    # casting/AD
+    casting_director_calltime = models.CharField(max_length=255, blank=True)
+    extras_casting_calltime = models.CharField(max_length=255, blank=True)
+    ad_1_calltime = models.CharField(max_length=255, blank=True)
+    ad_2_calltime = models.CharField(max_length=255, blank=True)
+    ad_3_calltime = models.CharField(max_length=255, blank=True)
+    ad_4_calltime = models.CharField(max_length=255, blank=True)
+    ad_5_calltime = models.CharField(max_length=255, blank=True)
+    pro_assistant_1_calltime = models.CharField(max_length=255, blank=True)
+    pro_assistant_2_calltime = models.CharField(max_length=255, blank=True)
+    pro_assistant_3_calltime = models.CharField(max_length=255, blank=True)
+    pro_assistant_4_calltime = models.CharField(max_length=255, blank=True)
+    pro_assistant_5_calltime = models.CharField(max_length=255, blank=True)
+    # eleGrip
+    gaffer_calltime = models.CharField(max_length=255, blank=True)
+    best_boy_electric_calltime = models.CharField(max_length=255, blank=True)
+    electric_3_calltime = models.CharField(max_length=255, blank=True)
+    electric_4_calltime = models.CharField(max_length=255, blank=True)
+    keygrip_calltime = models.CharField(max_length=255, blank=True)
+    best_boy_grip_calltime = models.CharField(max_length=255, blank=True)
+    dolly_grip_calltime = models.CharField(max_length=255, blank=True)
+    swing_ge1_calltime = models.CharField(max_length=255, blank=True)
+    swing_ge2_calltime = models.CharField(max_length=255, blank=True)
+    swing_ge3_calltime = models.CharField(max_length=255, blank=True)
+    swing_ge4_calltime = models.CharField(max_length=255, blank=True)
+    swing_ge5_calltime = models.CharField(max_length=255, blank=True)
+    # locations
+    location_mngr_calltime = models.CharField(max_length=255, blank=True)
+    location_security_calltime = models.CharField(max_length=255, blank=True)
+    location_ass_1_calltime = models.CharField(max_length=255, blank=True)
+    location_ass_2_calltime = models.CharField(max_length=255, blank=True)
+    location_ass_3_calltime = models.CharField(max_length=255, blank=True)
+    location_ass_4_calltime = models.CharField(max_length=255, blank=True)
+    # makeup
+    key_hairmakeup_calltime = models.CharField(max_length=255, blank=True)
+    key_hairstylist_calltime = models.CharField(max_length=255, blank=True)
+    sfx_makeup_calltime = models.CharField(max_length=255, blank=True)
+    sfx_makeup_assistant_calltime = models.CharField(
+        max_length=255, blank=True)
+    makeup_artist_1_calltime = models.CharField(max_length=255, blank=True)
+    makeup_artist_2_calltime = models.CharField(max_length=255, blank=True)
+    makeup_artist_3_calltime = models.CharField(max_length=255, blank=True)
+    makeup_artist_4_calltime = models.CharField(max_length=255, blank=True)
+    makeup_artist_5_calltime = models.CharField(max_length=255, blank=True)
+    # post/add-pos
+    editor_calltime = models.CharField(max_length=255, blank=True)
+    fx_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_1_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_2_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_3_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_4_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_5_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_6_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_7_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_8_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_9_calltime = models.CharField(max_length=255, blank=True)
+    add_pos_10_calltime = models.CharField(max_length=255, blank=True)
+    # script/cater
+    writer_calltime = models.CharField(max_length=255, blank=True)
+    catering_co_1_calltime = models.CharField(max_length=255, blank=True)
+    catering_co_2_calltime = models.CharField(max_length=255, blank=True)
+    catering_co_3_calltime = models.CharField(max_length=255, blank=True)
+    craft_service_calltime = models.CharField(max_length=255, blank=True)
+    crafty_ass_calltime = models.CharField(max_length=255, blank=True)
+    # sound/transport
+    sound_mixer_calltime = models.CharField(max_length=255, blank=True)
+    boom_operator_calltime = models.CharField(max_length=255, blank=True)
+    sound_assistant_1_calltime = models.CharField(max_length=255, blank=True)
+    sound_assistant_2_calltime = models.CharField(max_length=255, blank=True)
+    transport_captain_calltime = models.CharField(max_length=255, blank=True)
+    transport_manager_1_calltime = models.CharField(max_length=255, blank=True)
+    transport_manager_2_calltime = models.CharField(max_length=255, blank=True)
+    head_driver_calltime = models.CharField(max_length=255, blank=True)
+    car1_calltime = models.CharField(max_length=255, blank=True)
+    car2_calltime = models.CharField(max_length=255, blank=True)
+    car3_calltime = models.CharField(max_length=255, blank=True)
+    truck1_calltime = models.CharField(max_length=255, blank=True)
+    truck2_calltime = models.CharField(max_length=255, blank=True)
+    truck3_calltime = models.CharField(max_length=255, blank=True)
+    # stunts
+    stunt_coordinator_calltime = models.CharField(max_length=255, blank=True)
+    stunts_1_calltime = models.CharField(max_length=255, blank=True)
+    stunts_2_calltime = models.CharField(max_length=255, blank=True)
+    stunts_3_calltime = models.CharField(max_length=255, blank=True)
+    stunts_4_calltime = models.CharField(max_length=255, blank=True)
+    stunts_5_calltime = models.CharField(max_length=255, blank=True)
+    # wardrobe
+    costume_designer_calltime = models.CharField(max_length=255, blank=True)
+    ass_costume_designer_calltime = models.CharField(
+        max_length=255, blank=True)
+    wardrobe_assistant_1_calltime = models.CharField(
+        max_length=255, blank=True)
+    wardrobe_assistant_2_calltime = models.CharField(
+        max_length=255, blank=True)
+    wardrobe_assistant_3_calltime = models.CharField(
+        max_length=255, blank=True)
+    wardrobe_assistant_4_calltime = models.CharField(
+        max_length=255, blank=True)
+    wardrobe_assistant_5_calltime = models.CharField(
+        max_length=255, blank=True)
 
     class Meta:
         ordering = ['day']
