@@ -49,7 +49,7 @@ class CallsheetnewList(generics.ListCreateAPIView):
         filters.OrderingFilter,
         ]
 
-    filterset_fields = ['day', 'date']
+    filterset_fields = ['day', 'date', 'day_id']
 
     search_fields = ['day', 'date']
 
