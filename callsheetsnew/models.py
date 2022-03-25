@@ -20,6 +20,9 @@ class CrewInfonew(models.Model):
     company_logo = models.ImageField(
         upload_to='images/', blank=True
     )
+    director_name = models.CharField(max_length=255, blank=True)
+    director_email = models.CharField(max_length=255, blank=True)
+    director_phone = models.CharField(max_length=255, blank=True)
     producer_name = models.CharField(max_length=255, blank=True)
     producer_email = models.CharField(max_length=255, blank=True)
     producer_phone = models.CharField(max_length=255, blank=True)
@@ -450,6 +453,7 @@ class Callsheetnew(models.Model):
     walkie_channel_grip = models.CharField(max_length=255, blank=True)
     # CALLS
     # production
+    director_calltime = models.CharField(max_length=255, blank=True)
     producer_calltime = models.CharField(max_length=255, blank=True)
     pro_coordinator_calltime = models.CharField(max_length=255, blank=True)
     travel_coordinator_calltime = models.CharField(max_length=255, blank=True)
