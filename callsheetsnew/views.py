@@ -59,7 +59,7 @@ class CallsheetnewDetail(generics.RetrieveUpdateDestroyAPIView):
     Get, put and delete Callsheet
     """
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    serializer_class = CrewInfonewSerializer
+    serializer_class = CallsheetnewSerializer
     queryset = Callsheetnew.objects.all()
 
 
