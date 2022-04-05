@@ -444,6 +444,10 @@ class Callsheetnew(models.Model):
     location_4_parking_n_notes = models.TextField(blank=True)
     location_5_parking_n_notes = models.TextField(blank=True)
     nearest_hospital = models.TextField(blank=True)
+    hospital_address_line_1 = models.TextField(blank=True)
+    hospital_address_line_2 = models.TextField(blank=True)
+    hospital_address_line_3 = models.TextField(blank=True)
+    hospital_address_line_4 = models.TextField(blank=True)
     weather_location = models.CharField(max_length=255, blank=True)
     important_info = models.TextField(blank=True)
     transport_info = models.TextField(blank=True)
@@ -556,6 +560,7 @@ class Callsheetnew(models.Model):
     add_pos_8_calltime = models.CharField(max_length=255, blank=True)
     add_pos_9_calltime = models.CharField(max_length=255, blank=True)
     add_pos_10_calltime = models.CharField(max_length=255, blank=True)
+    all_other_add_positions_calltimes = models.TextField(blank=True)
     # script/cater
     writer_calltime = models.CharField(max_length=255, blank=True)
     catering_co_1_calltime = models.CharField(max_length=255, blank=True)
