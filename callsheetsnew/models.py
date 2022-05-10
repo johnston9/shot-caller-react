@@ -483,6 +483,7 @@ class Callsheetnew(models.Model):
     oth_production_pos_5_calltime = models.CharField(
         max_length=255, blank=True)
     # art
+    production_designer_calltime = models.CharField(max_length=255, blank=True)
     art_director_calltime = models.CharField(max_length=255, blank=True)
     art_assistant_calltime = models.CharField(max_length=255, blank=True)
     set_decorator_calltime = models.CharField(max_length=255, blank=True)
