@@ -493,6 +493,7 @@ class Callsheetnew(models.Model):
     prop_master_calltime = models.CharField(max_length=255, blank=True)
     ass_prop_master_calltime = models.CharField(max_length=255, blank=True)
     prop_buyer_calltime = models.CharField(max_length=255, blank=True)
+    armorer_calltime = models.CharField(max_length=255, blank=True)
     # camera
     dop_calltime = models.CharField(max_length=255, blank=True)
     camera_operator_calltime = models.CharField(max_length=255, blank=True)
