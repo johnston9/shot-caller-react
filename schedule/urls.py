@@ -1,5 +1,5 @@
 """
-Urls for Schedule App
+Urls for Schedule App xxx
 """
 from django.urls import path
 from schedule import views
