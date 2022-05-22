@@ -6,7 +6,7 @@ class Character(models.Model):
     """
     Character model.
     """
-    number = models.CharField(max_length=255, blank=True)
+    number = models.CharField(max_length=255, blank=False)
     role = models.CharField(max_length=255, blank=True)
     actor = models.CharField(max_length=255, blank=True)
     pickup_address = models.TextField(blank=True)
