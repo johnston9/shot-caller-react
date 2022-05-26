@@ -4,10 +4,11 @@ from django.db import models
 
 class Character(models.Model):
     """
-    Character model.
+    Character model
     """
     number = models.CharField(max_length=255, blank=False)
     role = models.CharField(max_length=255, blank=True)
+    username = models.CharField(max_length=255, blank=True)
     actor = models.CharField(max_length=255, blank=True)
     pickup_address = models.TextField(blank=True)
     pickup_address_2 = models.TextField(blank=True)

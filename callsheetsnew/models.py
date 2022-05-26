@@ -623,6 +623,7 @@ class Castcallnew(models.Model):
     shoot_day = models.CharField(max_length=255, blank=True)
     shoot_date = models.CharField(max_length=255, blank=True)
     cast_number = models.CharField(max_length=255, blank=True)
+    username = models.CharField(max_length=255, blank=True)
     role = models.CharField(max_length=255, blank=True)
     artist = models.CharField(max_length=255, blank=True)
     contact = models.CharField(max_length=255, blank=True)
