@@ -1,10 +1,25 @@
-""" IndexShot1 serializer """
+""" IndexShot1 serializers """
 from rest_framework import serializers
-from .models import IndexShot1
+from .models import IndexShot
+from .models import Series
 
 
-class IndexShot1Serializer(serializers.ModelSerializer):
-    """ IndexShot1 serializer """
+class SeriesSerializer(serializers.ModelSerializer):
+    """
+    Serializer class for the Series model
+    """
+
+    class Meta:
+        """
+        Meta for Series Serializer
+        """
+        model = Series
+        fields = [
+            'id', 'name', ]
+
+
+class IndexShotSerializer(serializers.ModelSerializer):
+    """ IndexShot serializer """
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -20,6 +35,6 @@ class IndexShot1Serializer(serializers.ModelSerializer):
         return value
 
     class Meta:
-        model = IndexShot1
+        model = IndexShot
         fields = [
-            'number', 'id', 'content', 'image', ]
+            'number', 'id', 'content', 'image', 'series']
