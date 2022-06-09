@@ -40,4 +40,6 @@ urlpatterns = [
     path('', include('moodshots.urls')),
     path('', include('locations.urls')),
     path('', include('callsheetsnew.urls')),
+    path('', include('indexcards.urls')),
+    path('', include('indexshots1.urls')),
 ]

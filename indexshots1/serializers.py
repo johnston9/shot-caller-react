@@ -15,7 +15,7 @@ class SeriesSerializer(serializers.ModelSerializer):
         """
         model = Series
         fields = [
-            'id', 'name', ]
+            'id', 'name', 'content']
 
 
 class IndexShotSerializer(serializers.ModelSerializer):
