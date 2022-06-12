@@ -37,4 +37,5 @@ class IndexShotSerializer(serializers.ModelSerializer):
     class Meta:
         model = IndexShot
         fields = [
-            'number', 'id', 'content', 'image', 'series']
+            'series_id', 'series_name', 'number',
+            'id', 'content', 'image']
