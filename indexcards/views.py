@@ -1,6 +1,6 @@
 """ Generic IndexCard views """
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, permissions, filters
+from django_filters.rest_framework import DjangoFilterBackend
 from .models import IndexCard
 from .serializers import IndexCardSerializer
 
@@ -11,16 +11,21 @@ class IndexCardList(generics.ListCreateAPIView):
     """
     serializer_class = IndexCardSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    queryset = IndexCard.objects.all()
+    queryset = IndexCard.objects.all().order_by('number')
 
     filter_backends = [
         filters.SearchFilter,
         DjangoFilterBackend,
+        filters.OrderingFilter,
         ]
 
     filterset_fields = ['number']
 
     search_fields = ['number']
+
+    ordering_fields = [
+        'number',
+    ]
 
 
 class IndexCardDetail(generics.RetrieveUpdateDestroyAPIView):

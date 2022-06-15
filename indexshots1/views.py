@@ -1,6 +1,6 @@
 """ Generic IndexShot1 views """
-from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import generics, permissions, filters
+from django_filters.rest_framework import DjangoFilterBackend
 from .models import Series
 from .serializers import SeriesSerializer
 from .models import IndexShot
@@ -16,6 +16,7 @@ class SeriesList(generics.ListCreateAPIView):
     filter_backends = [
         filters.SearchFilter,
         DjangoFilterBackend,
+        filters.OrderingFilter,
         ]
 
     filterset_fields = ['name', ]
@@ -49,6 +50,10 @@ class IndexShotList(generics.ListCreateAPIView):
     filterset_fields = ['number']
 
     search_fields = ['number']
+
+    ordering_fields = [
+        'number',
+    ]
 
 
 class IndexShotDetail(generics.RetrieveUpdateDestroyAPIView):
