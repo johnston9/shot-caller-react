@@ -7,7 +7,7 @@ class Series(models.Model):
     Related to IndexShot
     """
 
-    name = models.CharField(max_length=255, blank=True)
+    name = models.CharField(max_length=255, blank=False)
     content = models.TextField(blank=True)
 
     class Meta:
@@ -23,7 +23,7 @@ class IndexShot(models.Model):
     """
     series_id = models.ForeignKey(Series, on_delete=models.CASCADE)
     series_name = models.CharField(max_length=255, blank=True)
-    number = models.CharField(max_length=255, blank=True)
+    number = models.IntegerField(blank=False)
     content = models.CharField(max_length=255, blank=True)
     image = models.ImageField(
         upload_to='images/', blank=True

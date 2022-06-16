@@ -6,7 +6,7 @@ class IndexCard(models.Model):
     """
     IndexCard model
     """
-    number = models.CharField(max_length=255, blank=True)
+    number = models.IntegerField(blank=False)
     story = models.TextField(blank=True)
     style = models.TextField(blank=True)
 
