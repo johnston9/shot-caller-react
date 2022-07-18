@@ -1,5 +1,5 @@
 """
-Model for Scenes App
+Model for the Scenes App
 """
 from django.db import models
 
