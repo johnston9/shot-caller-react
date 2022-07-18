@@ -1,4 +1,4 @@
-""" Views for Scenes App """
+""" Views for the Scenes App """
 from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from shot_caller_react.permissions import IsOwnerOrReadOnly
