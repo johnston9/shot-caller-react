@@ -88,7 +88,7 @@ class Scene(models.Model):
     storyboard = models.ImageField(
         upload_to='images/', default='', blank=True
     )
-    image = models.FileField(
+    image = models.ImageField(
         upload_to='images/', default='', blank=True
     )
 
