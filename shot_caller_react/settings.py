@@ -135,6 +135,7 @@ INSTALLED_APPS = [
     'locations',
     'indexcards',
     'indexshots1',
+    'script',
     ]
 
 SITE_ID = 1

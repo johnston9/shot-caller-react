@@ -42,4 +42,5 @@ urlpatterns = [
     path('', include('callsheetsnew.urls')),
     path('', include('indexcards.urls')),
     path('', include('indexshots1.urls')),
+    path('', include('script.urls')),
 ]
