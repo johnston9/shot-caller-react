@@ -33,5 +33,5 @@ class SceneSerializer(serializers.ModelSerializer):
             'character10_number', 'character11_number', 'character12_number',
             'background_artists', 'background_artists_costumes',
             'other_characters', 'other_characters_costumes', 'shooting_date',
-            'workspace_guide', 'storyboard', 'pages',
+            'workspace_guide', 'storyboard', 'pages', 'location_detail',
         ]

@@ -30,6 +30,7 @@ class Scene(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     location = models.CharField(max_length=255, blank=True)
+    location_detail = models.CharField(max_length=255, blank=True)
     dramatic_day = models.CharField(max_length=255, blank=True)
     department_info = models.TextField(blank=True)
     equip_set_props = models.TextField(blank=True)
