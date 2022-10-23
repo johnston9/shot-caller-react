@@ -38,7 +38,7 @@ class ScheduleScene(models.Model):
     """
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
     day = models.TextField(blank=True)
-    day_order_number = models.CharField(max_length=255, blank=True)
+    day_order_number = models.IntegerField(blank=True)
     date = models.TextField(blank=True, default="")
     number = models.TextField(blank=True)
     act = models.TextField(blank=True)
