@@ -639,7 +639,7 @@ class Castcallnew(models.Model):
     inst = models.TextField(blank=True)
 
     class Meta:
-        ordering = ['cast_number']
+        ordering = ['call']
 
     def __str__(self):
         return f'{self.role}'
