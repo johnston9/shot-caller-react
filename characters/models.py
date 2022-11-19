@@ -6,7 +6,7 @@ class Character(models.Model):
     """
     Character model
     """
-    number = models.CharField(max_length=255, blank=False)
+    number = models.IntegerField(blank=False)
     role = models.CharField(max_length=255, blank=True)
     username = models.CharField(max_length=255, blank=True)
     actor = models.CharField(max_length=255, blank=True)

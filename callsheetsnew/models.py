@@ -626,7 +626,7 @@ class Castcallnew(models.Model):
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
     shoot_day = models.CharField(max_length=255, blank=True)
     shoot_date = models.CharField(max_length=255, blank=True)
-    cast_number = models.CharField(max_length=255, blank=True)
+    cast_number = models.IntegerField(blank=False)
     username = models.CharField(max_length=255, blank=True)
     role = models.CharField(max_length=255, blank=True)
     artist = models.CharField(max_length=255, blank=True)
@@ -639,7 +639,7 @@ class Castcallnew(models.Model):
     inst = models.TextField(blank=True)
 
     class Meta:
-        ordering = ['call']
+        ordering = ['cast_number']
 
     def __str__(self):
         return f'{self.role}'
