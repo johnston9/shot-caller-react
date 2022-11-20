@@ -115,3 +115,20 @@ class SceneCharacterAdd(models.Model):
 
     def __str__(self):
         return f'{self.role}'
+
+
+class SceneBGAdd(models.Model):
+    """
+    SceneBGAdd Model
+    """
+
+    scene_id = models.ForeignKey(Scene, on_delete=models.CASCADE)
+    quantity = models.CharField(max_length=255, blank=True)
+    role = models.CharField(max_length=255, blank=True)
+    costume = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ['role']
+
+    def __str__(self):
+        return f'{self.role}'

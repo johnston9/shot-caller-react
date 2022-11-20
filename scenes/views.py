@@ -6,6 +6,8 @@ from .models import Scene
 from .serializers import SceneSerializer
 from .models import SceneCharacterAdd
 from .serializers import SceneCharacterAddSerializer
+from .models import SceneBGAdd
+from .serializers import SceneBGAddSerializer
 
 
 class ScenesList(generics.ListCreateAPIView):
@@ -63,3 +65,29 @@ class SceneCharacterAddDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = SceneCharacterAddSerializer
     queryset = SceneCharacterAdd.objects.all()
+
+
+class SceneBGAddList(generics.ListCreateAPIView):
+    """ List all SceneBGAdds """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = SceneBGAddSerializer
+    queryset = SceneBGAdd.objects.all()
+
+    filter_backends = [
+        filters.SearchFilter,
+        DjangoFilterBackend,
+        filters.OrderingFilter,
+        ]
+
+    filterset_fields = ['scene_id', 'role']
+
+    search_fields = ['role']
+
+
+class SceneBGAddDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Get, put and delete SceneBGAdd
+    """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = SceneBGAddSerializer
+    queryset = SceneBGAdd.objects.all()

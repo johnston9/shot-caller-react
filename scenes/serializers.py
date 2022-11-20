@@ -4,6 +4,7 @@ Serializer for Scenes App
 from rest_framework import serializers
 from .models import Scene
 from .models import SceneCharacterAdd
+from .models import SceneBGAdd
 
 
 class SceneSerializer(serializers.ModelSerializer):
@@ -48,4 +49,17 @@ class SceneCharacterAddSerializer(serializers.ModelSerializer):
         Meta for SceneCharacterAdd Serializer
         """
         model = SceneCharacterAdd
+        fields = '__all__'
+
+
+class SceneBGAddSerializer(serializers.ModelSerializer):
+    """
+    Serializer class for the SceneBGAdd model
+    """
+
+    class Meta:
+        """
+        Meta for SceneBGAdd Serializer
+        """
+        model = SceneBGAdd
         fields = '__all__'

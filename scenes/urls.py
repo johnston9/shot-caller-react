@@ -9,4 +9,6 @@ urlpatterns = [
     path('scenes/<int:pk>/', views.SceneDetail.as_view()),
     path('scenecharacters/', views.SceneCharacterAddList.as_view()),
     path('scenecharacters/<int:pk>/', views.SceneCharacterAddDetail.as_view()),
+    path('scenebgs/', views.SceneBGAddList.as_view()),
+    path('scenebgs/<int:pk>/', views.SceneBGAddDetail.as_view()),
 ]
