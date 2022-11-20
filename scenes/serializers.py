@@ -3,6 +3,7 @@ Serializer for Scenes App
 """
 from rest_framework import serializers
 from .models import Scene
+from .models import SceneCharacterAdd
 
 
 class SceneSerializer(serializers.ModelSerializer):
@@ -35,3 +36,16 @@ class SceneSerializer(serializers.ModelSerializer):
             'other_characters', 'other_characters_costumes', 'shooting_date',
             'workspace_guide', 'storyboard', 'pages', 'location_detail',
         ]
+
+
+class SceneCharacterAddSerializer(serializers.ModelSerializer):
+    """
+    Serializer class for the SceneCharacterAdd model
+    """
+
+    class Meta:
+        """
+        Meta for SceneCharacterAdd Serializer
+        """
+        model = SceneCharacterAdd
+        fields = '__all__'

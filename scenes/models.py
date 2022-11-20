@@ -98,3 +98,20 @@ class Scene(models.Model):
 
     def __str__(self):
         return f'{self.number} {self.location}'
+
+
+class SceneCharacterAdd(models.Model):
+    """
+    SceneCharacterAdd Model
+    """
+
+    scene_id = models.ForeignKey(Scene, on_delete=models.CASCADE)
+    cast_number = models.IntegerField(blank=False)
+    role = models.CharField(max_length=255, blank=True)
+    costume = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ['cast_number']
+
+    def __str__(self):
+        return f'{self.role}'

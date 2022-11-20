@@ -4,6 +4,8 @@ from django_filters.rest_framework import DjangoFilterBackend
 from shot_caller_react.permissions import IsOwnerOrReadOnly
 from .models import Scene
 from .serializers import SceneSerializer
+from .models import SceneCharacterAdd
+from .serializers import SceneCharacterAddSerializer
 
 
 class ScenesList(generics.ListCreateAPIView):
@@ -35,3 +37,29 @@ class SceneDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = SceneSerializer
     queryset = Scene.objects.all()
+
+
+class SceneCharacterAddList(generics.ListCreateAPIView):
+    """ List all SceneCharacterAdds """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = SceneCharacterAddSerializer
+    queryset = SceneCharacterAdd.objects.all()
+
+    filter_backends = [
+        filters.SearchFilter,
+        DjangoFilterBackend,
+        filters.OrderingFilter,
+        ]
+
+    filterset_fields = ['scene_id', 'role']
+
+    search_fields = ['role']
+
+
+class SceneCharacterAddDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Get, put and delete SceneCharacterAdds
+    """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = SceneCharacterAddSerializer
+    queryset = SceneCharacterAdd.objects.all()
