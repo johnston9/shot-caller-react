@@ -17,13 +17,14 @@ class SceneSerializer(serializers.ModelSerializer):
         Meta for Scene Serializer
         """
         model = Scene
-        fields = [
-            'id', 'number', 'act', 'created_at', 'updated_at', 'title',
-            'int_ext', 'day_night', 'time', 'location', 'filming_location',
-            'action', 'equip_set_props', 'dramatic_day', 'department_info',
-            'script', 'character1', 'shooting_date',
-            'workspace_guide', 'storyboard', 'pages', 'location_detail',
-        ]
+        fields = '__all__'
+        # fields = [
+        #     'id', 'number', 'act', 'created_at', 'updated_at', 'title',
+        #     'int_ext', 'day_night', 'time', 'location', 'filming_location',
+        #     'action', 'equip_set_props', 'dramatic_day', 'department_info',
+        #     'script', 'character1', 'shooting_date',
+        #     'workspace_guide', 'storyboard', 'pages', 'location_detail',
+        # ]
 
 
 class SceneCharacterAddSerializer(serializers.ModelSerializer):
