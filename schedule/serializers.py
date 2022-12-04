@@ -19,9 +19,7 @@ class DaySerializer(serializers.ModelSerializer):
         """
         model = Day
         fields = [
-            'id', 'day', 'date', 'scene1', 'scene2', 'scene3', 'scene4',
-            'scene5', 'scene6', 'scene7', 'scene8', 'scene9', 'scene10',
-            'scene11', 'scene12', 'location1', 'xtra_scenes', 'crewcall',
+            'id', 'day', 'date',
             ]
 
 
@@ -36,28 +34,10 @@ class ScheduleSceneSerializer(serializers.ModelSerializer):
         """
         model = ScheduleScene
         fields = [
-            'id', 'day_id', 'day', 'day_order_number', 'date', 'number',
-            'title', 'start_time', 'end_time', 'int_ext', 'time',
-            'action', 'act', 'day_night',
+            'scene_id', 'id', 'day_id', 'day', 'day_order_number',
+            'date', 'number', 'title', 'start_time', 'end_time',
+            'int_ext', 'time', 'action', 'act', 'day_night',
             'dramatic_day', 'location',
             'location_detail', 'filming_location', 'location_address',
             'equip_set_props', 'department_info', 'next', 'new_info',
-            'character1', 'character1_costume', 'character2', 'pages',
-            'character2_costume', 'character3', 'character3_costume',
-            'character4', 'character4_costume', 'character5',
-            'character5_costume', 'character6', 'character6_costume',
-            'character7', 'character7_costume', 'character8',
-            'character8_costume', 'character9', 'character9_costume',
-            'character10', 'character10_costume',
-            'character11', 'character11_costume',
-            'character12', 'character12_costume', 'other_characters',
-            'other_characters_costumes', 'background_artists',
-            'background_artists_costumes',
-            'character1_number', 'character2_number',
-            'character3_number', 'character4_number',
-            'character5_number', 'character6_number',
-            'character7_number', 'character8_number',
-            'character9_number', 'character10_number',
-            'character11_number', 'character12_number',
-            'other_characters_numbers',
             ]
