@@ -37,7 +37,7 @@ class ScheduleSceneSerializer(serializers.ModelSerializer):
             'scene_id', 'id', 'day_id', 'day', 'day_order_number',
             'date', 'number', 'title', 'start_time', 'end_time',
             'int_ext', 'time', 'action', 'act', 'day_night',
-            'dramatic_day', 'location',
+            'dramatic_day', 'location', 'pages',
             'location_detail', 'filming_location', 'location_address',
             'equip_set_props', 'department_info', 'next', 'new_info',
             ]
