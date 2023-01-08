@@ -13,7 +13,7 @@ class Department(models.Model):
         ('location', 'Location'), ('sound', 'Sound'),
         ('casting', 'Casting'), ('post', 'Post/VSF'),
         ('production', 'Production'), ('stunts', 'Stunts'),
-        ('electric', 'Electric/Grip'),
+        ('electric', 'Electric/Grip'), ('latest', 'Latest'),
      ]
 
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
