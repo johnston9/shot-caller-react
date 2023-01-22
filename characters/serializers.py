@@ -4,7 +4,8 @@ from .models import Character
 
 
 class CharacterSerializer(serializers.ModelSerializer):
-    """ Characters serializer """
+    """ Characters serializer
+        'project_name', 'project_id', 'project_stripe_id', """
 
     class Meta:
         model = Character

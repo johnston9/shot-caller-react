@@ -126,6 +126,7 @@ INSTALLED_APPS = [
     'likes',
     'followers',
     'archives',
+    'opened',
     'departments',
     'schedule',
     'callsheetsnew',

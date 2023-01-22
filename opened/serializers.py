@@ -1,16 +1,16 @@
-""" serializer for Archive model """
+""" serializer for Opened model """
 from django.db import IntegrityError
 from rest_framework import serializers
-from .models import Archive
+from .models import Opened
 
 
-class ArchiveSerializer(serializers.ModelSerializer):
-    """ Archive serializers """
+class OpenedSerializer(serializers.ModelSerializer):
+    """ Opened serializers """
     owner = serializers.ReadOnlyField(source='owner.username')
 
     class Meta:
-        """ Meta for Archive Serializer """
-        model = Archive
+        """ Meta for Opened Serializer """
+        model = Opened
         fields = ['id', 'created_at', 'owner', 'post']
 
     def create(self, validated_data):

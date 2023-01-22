@@ -5,6 +5,9 @@ from django.db import models
 class Character(models.Model):
     """
     Character model
+    project_name = models.CharField(max_length=255, blank=True)
+    project_id = models.CharField(max_length=255, blank=True)
+    project_stripe_id = models.CharField(max_length=255, blank=True)
     """
     number = models.IntegerField(blank=False)
     role = models.CharField(max_length=255, blank=True)

@@ -2,6 +2,7 @@
 from rest_framework import serializers
 from likes.models import Like
 from archives.models import Archive
+from opened.models import Opened
 from .models import Post
 
 
@@ -17,6 +18,7 @@ class PostSerializer(serializers.ModelSerializer):
     comments_count = serializers.ReadOnlyField()
     likes_count = serializers.ReadOnlyField()
     archive_id = serializers.SerializerMethodField()
+    opened_id = serializers.SerializerMethodField()
 
     def validate_image(self, value):
         if value.size > 2 * 1024 * 1024:
@@ -55,13 +57,23 @@ class PostSerializer(serializers.ModelSerializer):
             return archive.id if archive else None
         return None
 
+    def get_opened_id(self, obj):
+        user = self.context['request'].user
+        if user.is_authenticated:
+            opened = Opened.objects.filter(
+                owner=user, post=obj
+            ).first()
+            print(opened)
+            return opened.id if opened else None
+        return None
+
     class Meta:
         model = Post
         fields = [
             'id', 'owner', 'scene', 'number', 'departments', 'category',
             'created_at', 'updated_at', 'title', 'like_id',
             'content', 'is_owner', 'profile_id', 'archive_id',
-            'name', 'position', 'profile_image',
+            'name', 'position', 'profile_image', 'opened_id',
             'image1', 'image2', 'image3', 'image4', 'image5',
             'comments_count', 'likes_count',
         ]
