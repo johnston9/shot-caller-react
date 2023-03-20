@@ -631,6 +631,7 @@ class Castcallnew(models.Model):
     role = models.CharField(max_length=255, blank=True)
     artist = models.CharField(max_length=255, blank=True)
     contact = models.CharField(max_length=255, blank=True)
+    email = models.CharField(max_length=255, blank=True)
     swf = models.CharField(max_length=255, blank=True)
     pickup = models.CharField(max_length=255, blank=True)
     call = models.TextField(blank=True)
