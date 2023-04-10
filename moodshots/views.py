@@ -1,4 +1,4 @@
-""" Generics views for the Moodshots app 
+""" Generics views for the Moodshots app
     In Shot Caller DRF the work Mootshot is used throughout
     for the Moodboard App in Shot Caller React
 """
