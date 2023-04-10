@@ -1,4 +1,7 @@
-""" Moodshots serializer """
+""" Moodshots serializer
+    In Shot Caller DRF the work Mootshot is used throughout
+    for the Moodboard App in Shot Caller React
+"""
 from rest_framework import serializers
 from .models import Moodshot
 

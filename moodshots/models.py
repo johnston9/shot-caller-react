@@ -1,4 +1,7 @@
-""" Moodshots Model """
+""" Moodshots Model
+    In Shot Caller DRF the work Mootshot is used throughout
+    for the Moodboard App in Shot Caller React
+    """
 from django.db import models
 from django.contrib.auth.models import User
 from scenes.models import Scene

@@ -1,4 +1,7 @@
-""" Generics views for the Moodshots app """
+""" Generics views for the Moodshots app 
+    In Shot Caller DRF the work Mootshot is used throughout
+    for the Moodboard App in Shot Caller React
+"""
 from rest_framework import generics, permissions, filters
 from django_filters.rest_framework import DjangoFilterBackend
 from .models import Moodshot

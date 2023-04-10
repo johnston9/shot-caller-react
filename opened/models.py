@@ -27,7 +27,8 @@ class Opened(models.Model):
 
 class OpenedDept(models.Model):
     """
-    Opened model for Department and Latest posts, related to 'owner' and 'post'.
+    Opened model for Department and Latest posts, 
+    related to 'owner' and 'post'.
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(
