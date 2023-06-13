@@ -8,6 +8,7 @@ class CrewInfonew(models.Model):
     CrewInfonew Model
     """
 
+    freeze = models.CharField(max_length=255, blank=True)
     total_shoot_days = models.CharField(max_length=255, blank=True)
     production_name = models.CharField(max_length=255, blank=True)
     production_company = models.CharField(max_length=255, blank=True)
