@@ -11,9 +11,9 @@ class Post(models.Model):
     """
     department_choices = [
         ('camera', 'Camera'), ('script', 'Script'), ('art', 'Art'),
-        ('make-up', 'Hair/Make-up'), ('wardrobe', 'Wardrobe'),
+        ('make-up', 'Hair/Makeup'), ('wardrobe', 'Wardrobe'),
         ('location', 'Location'), ('sound', 'Sound'),
-        ('casting', 'Casting'), ('post', 'Post/VSF'),
+        ('casting', 'Casting'), ('post', 'Post/FXS'),
         ('production', 'Production'), ('stunts', 'Stunts'),
         ('electric', 'Electric/Grip'), ('universal', 'Universal'),
      ]

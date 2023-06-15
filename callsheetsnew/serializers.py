@@ -6,6 +6,7 @@ from .models import CrewInfonew
 from .models import Callsheetnew
 from .models import Castcallnew
 from .models import Backgroundcallnew
+from .models import ExtraCrewInfo
 
 
 class CrewInfonewSerializer(serializers.ModelSerializer):
@@ -18,6 +19,19 @@ class CrewInfonewSerializer(serializers.ModelSerializer):
         Meta for CrewInfonew Serializer
         """
         model = CrewInfonew
+        fields = '__all__'
+
+
+class ExtraCrewInfoSerializer(serializers.ModelSerializer):
+    """
+    Serializer class for the ExtraCrewInfo model
+    """
+
+    class Meta:
+        """
+        Meta for ExtraCrewInfo Serializer
+        """
+        model = ExtraCrewInfo
         fields = '__all__'
 
 

@@ -674,6 +674,34 @@ class Callsheetnew(models.Model):
         return f'{self.day}'
 
 
+class ExtraCrewInfo(models.Model):
+    """
+    EXtraCrewInfo Model
+    """
+    department_choices = [
+        ('camera', 'Camera'), ('script', 'Script'), ('art', 'Art'),
+        ('make-up', 'Hair/Makeup'), ('wardrobe', 'Wardrobe'),
+        ('location', 'Location'), ('sound', 'Sound'),
+        ('casting', 'Casting'), ('post', 'Post/FXS'),
+        ('production', 'Production'), ('stunts', 'Stunts'),
+        ('electric', 'Electric/Grip'), ('additional', 'Additional'),
+     ]
+
+    name = models.CharField(max_length=255, blank=True)
+    position = models.CharField(max_length=255, blank=True)
+    departments = models.CharField(
+        max_length=32, choices=department_choices, default='other'
+    )
+    email = models.EmailField(max_length=255, blank=True)
+    phone = models.CharField(max_length=255, blank=True)
+
+    class Meta:
+        ordering = ['name']
+
+    def __str__(self):
+        return f'{self.name}'
+
+
 class Castcallnew(models.Model):
     """
     Castcallnew Model

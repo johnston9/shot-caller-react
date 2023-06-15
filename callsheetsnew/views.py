@@ -9,6 +9,8 @@ from .models import Castcallnew
 from .serializers import CastcallnewSerializer
 from .models import Backgroundcallnew
 from .serializers import BackgroundcallnewSerializer
+from .models import ExtraCrewInfo
+from .serializers import ExtraCrewInfoSerializer
 
 
 class CrewInfonewList(generics.ListCreateAPIView):
@@ -35,6 +37,32 @@ class CrewInfonewDetail(generics.RetrieveUpdateDestroyAPIView):
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = CrewInfonewSerializer
     queryset = CrewInfonew.objects.all()
+
+
+class ExtraCrewInfoList(generics.ListCreateAPIView):
+    """ List all ExtraCrewInfo """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = ExtraCrewInfoSerializer
+    queryset = ExtraCrewInfo.objects.all()
+
+    filter_backends = [
+        filters.SearchFilter,
+        DjangoFilterBackend,
+        filters.OrderingFilter,
+        ]
+
+    filterset_fields = ['departments']
+
+    search_fields = ['departments']
+
+
+class ExtraCrewInfoDetail(generics.RetrieveUpdateDestroyAPIView):
+    """
+    Get, put and delete ExtraCrewInfo
+    """
+    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    serializer_class = ExtraCrewInfoSerializer
+    queryset = ExtraCrewInfo.objects.all()
 
 
 class CallsheetnewList(generics.ListCreateAPIView):

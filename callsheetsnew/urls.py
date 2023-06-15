@@ -13,4 +13,6 @@ urlpatterns = [
     path('castcallsnew/<int:pk>/', views.CastcallnewDetail.as_view()),
     path('backgroundcallsnew/', views.BackgroundcallnewList.as_view()),
     path('backgroundcallsnew/<int:pk>/', views.BackgroundcallnewDetail.as_view()),
+    path('extracrewinfo/', views.ExtraCrewInfoList.as_view()),
+    path('extracrewinfo/<int:pk>/', views.ExtraCrewInfoDetail.as_view()),
 ]

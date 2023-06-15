@@ -68,6 +68,7 @@ ALLOWED_HOSTS = [
     os.environ.get('ALLOWED_HOST'),
     'http://localhost:8000',
     'localhost',
+    '8000-johnston9-shotcallerpro-8ul8hz2uwss.ws-eu99.gitpod.io',
 ]
 
 if 'CLIENT_ORIGIN' in os.environ:
