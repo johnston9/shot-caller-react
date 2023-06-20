@@ -597,7 +597,7 @@ class Callsheetnew(models.Model):
     makeup_artist_3_calltime = models.CharField(max_length=255, blank=True)
     makeup_artist_4_calltime = models.CharField(max_length=255, blank=True)
     makeup_artist_5_calltime = models.CharField(max_length=255, blank=True)
-    # post/additional-positions 
+    # post/additional-positions
     editor_calltime = models.CharField(max_length=255, blank=True)
     fx_calltime = models.CharField(max_length=255, blank=True)
     # additional 1-10
@@ -677,25 +677,16 @@ class ExtraCrewInfo(models.Model):
     """
     EXtraCrewInfo Model
     """
-    department_choices = [
-        ('camera', 'Camera'), ('script', 'Script'), ('art', 'Art'),
-        ('make-up', 'Hair/Makeup'), ('wardrobe', 'Wardrobe'),
-        ('location', 'Location'), ('sound', 'Sound'),
-        ('casting', 'Casting'), ('post', 'Post/FXS'),
-        ('production', 'Production'), ('stunts', 'Stunts'),
-        ('electric', 'Electric/Grip'), ('additional', 'Additional'),
-     ]
-
     name = models.CharField(max_length=255, blank=True)
     position = models.CharField(max_length=255, blank=True)
-    departments = models.CharField(
-        max_length=32, choices=department_choices, default='other'
-    )
+    departments = models.CharField(max_length=255, blank=True)
     email = models.EmailField(max_length=255, blank=True)
     phone = models.CharField(max_length=255, blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
-        ordering = ['name']
+        ordering = ['created_at']
 
     def __str__(self):
         return f'{self.name}'
