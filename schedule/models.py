@@ -8,7 +8,7 @@ class Day(models.Model):
     Related to ScheduleScene
     """
 
-    day = models.CharField(max_length=255, blank=True)
+    day = models.IntegerField(blank=False)
     date = models.DateField(blank=True, null=True)
 
     class Meta:
@@ -25,7 +25,7 @@ class ScheduleScene(models.Model):
     day_id = models.ForeignKey(Day, on_delete=models.CASCADE)
     scene_id = models.ForeignKey(Scene, on_delete=models.CASCADE)
     day = models.TextField(blank=True)
-    day_order_number = models.IntegerField(blank=True)
+    day_order_number = models.IntegerField(blank=False)
     date = models.TextField(blank=True, default="")
     number = models.TextField(blank=True)
     act = models.TextField(blank=True)
