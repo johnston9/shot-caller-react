@@ -46,7 +46,8 @@ class Scene(models.Model):
     shooting_date = models.CharField(max_length=255, blank=True, default="")
     action = models.CharField(max_length=255, blank=True)
     workspace_guide = models.TextField(blank=True)
-    storyboard = models.ImageField(
+    storyboard_url = models.CharField(max_length=255, blank=True)
+    storyboard = models.FileField(
         upload_to='images/', default='', blank=True
     )
     script = models.FileField(

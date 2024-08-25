@@ -22,7 +22,7 @@ class SceneSerializer(serializers.ModelSerializer):
         #     'id', 'number', 'act', 'created_at', 'updated_at', 'title',
         #     'int_ext', 'day_night', 'time', 'location', 'filming_location',
         #     'action', 'equip_set_props', 'dramatic_day', 'department_info',
-        #     'script', 'character1', 'shooting_date',
+        #     'script', 'character1', 'shooting_date', storyboard_url,
         #     'workspace_guide', 'storyboard', 'pages', 'location_detail',
         # ]
 
