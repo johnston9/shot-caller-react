@@ -9,7 +9,7 @@ class Shotlist(models.Model):
     """
     scene_id = models.ForeignKey(Scene, on_delete=models.CASCADE)
     scene_number = models.CharField(max_length=255, blank=True)
-    shot_number = models.CharField(max_length=255, blank=True)
+    shot_number = models.IntegerField(blank=False)
     size = models.CharField(max_length=255, blank=True)
     description = models.TextField(blank=True)
     angle = models.TextField(blank=True)
