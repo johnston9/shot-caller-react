@@ -25,7 +25,7 @@ class Shotlist(models.Model):
     script_ref = models.TextField(blank=True)
     storyboard_refs = models.TextField(blank=True)
     audio = models.TextField(blank=True)
-    image = models.ImageField(
+    image = models.FileField(
         upload_to='images/', blank=True
     )
 
