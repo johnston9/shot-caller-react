@@ -47,9 +47,9 @@ class IndexShotList(generics.ListCreateAPIView):
         filters.OrderingFilter,
         ]
 
-    filterset_fields = ['number']
+    filterset_fields = ['number, series_id']
 
-    search_fields = ['number']
+    search_fields = ['number, series_id']
 
     ordering_fields = [
         'number',
