@@ -54,7 +54,6 @@ class IndexShotList(generics.ListCreateAPIView):
 
     search_fields = [
         'number',
-        'series_id',
     ]
 
     ordering_fields = [
