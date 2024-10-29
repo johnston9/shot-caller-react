@@ -24,7 +24,7 @@ class DepartmentList(generics.ListCreateAPIView):
         'departments',
     ]
     search_fields = [
-        'name',
+        'owner__name',
         'title',
     ]
     ordering_fields = [
