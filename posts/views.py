@@ -36,7 +36,7 @@ class PostList(generics.ListCreateAPIView):
         'owner__profile',
     ]
     search_fields = [
-        'owner__username',
+        'owner__profile__name',
         'title',
     ]
     ordering_fields = [
