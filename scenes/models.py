@@ -35,10 +35,10 @@ class Scene(models.Model):
     department_info = models.TextField(blank=True)
     equip_set_props = models.TextField(blank=True)
     int_ext = models.CharField(
-        max_length=32, choices=EXT_INT_CHOICES, default='int', blank=True
+        max_length=32, choices=EXT_INT_CHOICES, blank=True
     )
     day_night = models.CharField(
-        max_length=32, choices=DAY_NIGHT_CHOICES, default='day', blank=True
+        max_length=32, choices=DAY_NIGHT_CHOICES, blank=True
     )
     pages = models.CharField(max_length=255, blank=True)
     time = models.CharField(max_length=255, blank=True)

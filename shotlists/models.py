@@ -7,6 +7,14 @@ class Shotlist(models.Model):
     """
     Related to Scene
     """
+    EXT_INT_CHOICES = [
+        ('ext', 'EXT.'),
+        ('int', 'INT.'),
+    ]
+    DAY_NIGHT_CHOICES = [
+        ('DAY', 'DAY'),
+        ('NIGHT', 'NIGHT'),
+    ]
     scene_id = models.ForeignKey(Scene, on_delete=models.CASCADE)
     scene_number = models.CharField(max_length=255, blank=True)
     shot_number = models.IntegerField(blank=False)
@@ -24,7 +32,12 @@ class Shotlist(models.Model):
     storyboard_refs = models.TextField(blank=True)
     audio = models.TextField(blank=True)
     framing = models.CharField(max_length=255, blank=True)
-    int_ext = models.CharField(max_length=255, blank=True)
+    int_ext = models.CharField(
+        max_length=32, choices=EXT_INT_CHOICES, blank=True
+    )
+    day_night = models.CharField(
+        max_length=32, choices=DAY_NIGHT_CHOICES, blank=True
+    )
     frame_rate = models.CharField(max_length=255, blank=True)
     location = models.TextField(blank=True)
     actors = models.TextField(blank=True)

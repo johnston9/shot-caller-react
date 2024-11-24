@@ -20,5 +20,5 @@ class ShotlistSerializer(serializers.ModelSerializer):
             'movement', 'fx', 'description', 'storyboard_refs', 'focus_pulls',
             'lens', 'equipment', 'lighting', 'audio', 'camera', 'script_ref',
             'audio', 'image', 'framing', 'int_ext', 'frame_rate', 'location',
-            'actors', 'notes',
+            'actors', 'notes', 'day_night',
             ]
