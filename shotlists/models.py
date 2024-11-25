@@ -8,8 +8,8 @@ class Shotlist(models.Model):
     Related to Scene
     """
     EXT_INT_CHOICES = [
-        ('ext', 'EXT.'),
-        ('int', 'INT.'),
+        ('EXT.', 'EXT'),
+        ('INT.', 'INT'),
     ]
     DAY_NIGHT_CHOICES = [
         ('DAY', 'DAY'),

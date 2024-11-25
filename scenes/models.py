@@ -9,8 +9,8 @@ class Scene(models.Model):
     Scene model
     """
     EXT_INT_CHOICES = [
-        ('ext', 'EXT.'),
-        ('int', 'INT.'),
+        ('ext', 'EXT'),
+        ('int', 'INT'),
     ]
     DAY_NIGHT_CHOICES = [
         ('DAY', 'DAY'),
