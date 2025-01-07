@@ -40,5 +40,5 @@ class DepartmentDetail(generics.RetrieveUpdateDestroyAPIView):
     Retrieve a post and edit or delete it if you own it.
     """
     serializer_class = DepartmentSerializer
-    permission_classes = [permissions.IsAuthenticatedOrReadOnly]
+    permission_classes = [IsOwnerOrReadOnly]
     queryset = Department.objects.all()
