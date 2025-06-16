@@ -32,6 +32,7 @@ class MoodshotList(generics.ListCreateAPIView):
         'number',
         'character',
         'location',
+        'title',
     ]
     ordering_fields = [
         'number',
