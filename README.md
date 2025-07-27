@@ -10,8 +10,8 @@ A Film, TV, and Video Production Platform. The Platform includes Budgeting Softw
 "Shot caller Production" is the commercial home site where users find out about and purchase the Platform and Budgeting software. 
 "Shot caller" runs the Platform while the Budgeting software is held on “Shot Caller Production”. <br> 
 
-This is the backend for Shot caller. You may find the testing here.
-[Shot Caller testing](https://github.com/johnston9/shot-caller/blob/main/TESTING.md)
+This is the backend for Shot Caller. You may find the testing here.
+[Shot Caller Testing](https://github.com/johnston9/shot-caller/blob/main/TESTING.md)
 <br>
 
 The Platform contain both the Creative and the Production sides of media production.<br>
@@ -108,69 +108,14 @@ Security measures prevent unauthorised users from accessing Project URLs they do
 ### Responsive Design
 The site is responsive to all screen sizes and the images respond in proportion. <br>
 
+## Features testing
 All Features testing is covered on the Shot Caller Frontend Testing page. [Testing](https://github.com/johnston9/shot-caller/blob/main/TESTING.md)
 
 [Back to Table of Content](#table-of-content)
 
 ## Permissions
 
-Depending on their Premission the User will has access to use different features of the app. The superadmin and Admin have access to all aspects of the app Creative and the production side, the only difference is that the SuperAdmin can delete users and has access to the "Freeze" feature which allows them to freeze Scene numbers, so the cannot be changed, at a certain moment in Production. <br>
-The admincreative has working access to only the Creative side of production but can view all the rest while the crew permission has only working access to Scenes Workspaces and Departments but still can view all the rest. The cast has only access to the Callsheets. For a full breakdown of Permissions see below.
-<br>
-
-### Permission Types
-
-1: superadmin <br>
-2: admin<br>
-3: admincreative<br>
-4: crew<br>
-5: cast<br>
-
-- superadmin<br>
-
-Full access <br>
-Registering and deleting users <br>
-Access to the Freeze feature<br>
-Creating and editing/deleting own and other’s Posts in the Scenes workspaces<br>
-Creating and editing/deleting own and other’s Comments in the Scenes workspaces<br> 
-Creating and editing/deleting Latest Buzz<br>
-Creating and editing/deleting Callsheets  <br>
-Creating and editing/ deleting Schedules<br>
-Creating and editing/ deleting Characters<br>
-Creating and editing/ deleting IndexCards<br>
-Creating and editing/ deleting IndexShots<br>
-Creating and editing/deleting Locations<br>
-Creating and editing/deleting Moodboads<br>
-Editing/deleting Profiles<br>
-Creating and editing/deleting own and other’s Posts in the Departments<br>
-Creating and editing/deleting Scenes, (and Episodes in the TV version), which includes:<br>
-a/ Creating and editing Breakdowns, Character and Background<br>
-b/ Creating and editing costumes for Character<br>
-c/ Uploading Scripts and Storyboards<br>
-d/ Creating and editing Shotlists<br>
-
-- admin<br>
-
-Full access as above excluding giving superadmin permissions, deleting users and access to the Freeze feature<br>
-   
-- admincreative<br>
-
-Limited access:<br>
-Cannot edit/delete Users or others Posts in Scenes Workspace or Departments. <br> 
-Cannot Create and edit/delete Schedules, Callsheets or Profiles.<br>
-
-- crew<br>
-
-Limited access:<br>
-Creating and editing/ deleting own Posts in the Scenes workspaces <br>
-Creating and editing/ deleting own Comments in the Scenes workspaces <br>
-Creating and editing/deleting own Posts in the Departments<br>
-Ability to view all features<br>
-
-- cast<br>
-
-Limited access.<br> 
-Only access to Callsheets<br>
+Depending on their Premissions Users will has access to different features of the app. Find these here. [Shot Caller Readme](https://github.com/johnston9/shot-caller/blob/main/README.md)
 
 ## Information Architecture
 
@@ -180,7 +125,7 @@ Only access to Callsheets<br>
 **SQLite3** was used during development and comes with Django Rest Frameworks. 
 
 - Deployment 
-**Postgres** ?????????????
+**Postgres** ????????????
 
 ### Database structure for Shot Caller Production - Model Tables by App
 Find these here. [Shot Caller Production Readme](https://github.com/johnston9/shot-caller-production/blob/main/README.md)
@@ -188,6 +133,10 @@ Find these here. [Shot Caller Production Readme](https://github.com/johnston9/sh
 [Back to Table of Content](#table-of-content)
 
 ### Database structure for Shot Caller - Model Tables by App
+
+#### Django contrib auth
+1 - <strong>User</strong> - to hold the authenticated users.<br>
+  - OneToOne Key to Profile.
 
 #### - Archives 
 1 - <strong>Archive</strong> - to hold a Post's Important info. <br>
@@ -344,7 +293,7 @@ On completion the functionality of the entire app was repeatedly tested on vario
 
 Pylint was also used in the backend workspace as the project was being built for Python and Django code and all errors were fixed on an ongoing process. <br> 
 
-PEP8 was used to validate the Python and JS in the project.
+PEP8 and PythonChecker were used to validate the Python and JS in the project.
     
 - [PythonChecker](https://www.pythonchecker.com/) 
   - PythonChecker approved all DRF python pages apart from a few too long lines in the setting.py which I decided to leave. 
