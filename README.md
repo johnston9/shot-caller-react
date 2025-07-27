@@ -338,6 +338,18 @@ The React Dependencies and DRF Requirements can be found in the Deployment secti
 - Find the complete testing coverage here on the Shot caller Frontend Testing doc.
 [Shot Caller Testing](https://github.com/johnston9/shot-caller/blob/main/TESTING.md)
 
+All functionality was tested as it was being built to ensure there were no errors that it did what it was meant to do and that all database errors were handled correctly. <br> 
+
+On completion the functionality of the entire app was repeatedly tested on various devices both by the development team and by Capital Numbers, the InfoTech company responsible for part of the development.<br> 
+
+Pylint was also used in the backend workspace as the project was being built for Python and Django code and all errors were fixed on an ongoing process. <br> 
+
+PEP8 was used to validate the Python and JS in the project.
+    
+- [PythonChecker](https://www.pythonchecker.com/) 
+  - PythonChecker approved all DRF python pages apart from a few too long lines in the setting.py which I decided to leave. 
+  [Results](documentation/testing/)
+
 ## Deployment - (Shot Caller and Shot Caller Production - Front and Backend)
 
 ### Development platform
