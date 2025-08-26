@@ -10,8 +10,8 @@ A Film, TV, and Video Production Platform. The Platform includes Budgeting Softw
 "Shot caller Production" is the commercial home site where users find out about and purchase the Platform and Budgeting software. 
 "Shot caller" runs the Platform while the Budgeting software is held on “Shot Caller Production”. <br> 
 
-This is the backend for Shot Caller. You may find the testing here.
-[Shot Caller Testing](https://github.com/johnston9/shot-caller/blob/main/TESTING.md)
+This is the Backend for Shot Caller. You may find the testing here.
+[Shot Caller Testing](https://github.com/johnston9/Testing-Shot-Caller/blob/main/TESTING.md)
 <br>
 
 The Platform contain both the Creative and the Production sides of media production.<br>
@@ -108,8 +108,9 @@ Security measures prevent unauthorised users from accessing Project URLs they do
 ### Responsive Design
 The site is responsive to all screen sizes and the images respond in proportion. <br>
 
-## Features testing
-All Features testing is covered on the Shot Caller Frontend Testing page. [Testing](https://github.com/johnston9/shot-caller/blob/main/TESTING.md)
+## Testing
+You may find the testing here. [Shot Caller Testing](https://github.com/johnston9/Testing-Shot-Caller/blob/main/TESTING.md)
+
 
 [Back to Table of Content](#table-of-content)
 
