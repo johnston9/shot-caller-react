@@ -32,6 +32,8 @@ If a User just purchases the Budgeting software they will also receive a URL by 
 
 There is no installation needed and no requirements for the app. If a User has any issues they can contact the site through the Contact Us page on "Shot caller Production".<br>
 
+# Table of Content
+
   * [Purpose](#purpose)
   * [Usage](#usage)
   * [Installation and Requirements](#installation-and-requirements)
@@ -45,12 +47,6 @@ There is no installation needed and no requirements for the app. If a User has a
   * [The Creative Features](#the-creative-features)
     + [Scenes Pages](#scenes-pages)
     + [Scene Page](#scene-page)
-      - [Scenes Breakdown](#scenes-breakdown)
-      - [Scenes Workspaces](#scenes-workspaces)
-      - [Scenes Shotlists](#scenes-shotlists)
-      - [Scenes Costumes](#scenes-costumes)
-      - [Scenes Script](#scenes-script)
-      - [Scenes Storyboard](#scenes-storyboard)
     + [Character pages](#character-pages)
     + [Locations pages](#locations-pages)
     + [Moodboards](#moodboards)
@@ -67,41 +63,11 @@ There is no installation needed and no requirements for the app. If a User has a
     + [Databases](#databases)
     + [Database structure for Shot Caller Production - Model Tables by App](#database-structure-for-shot-caller-production---model-tables-by-app)
     + [Database structure for Shot Caller - Model Tables by App](#database-structure-for-shot-caller---model-tables-by-app)
-      - [Django contrib auth](#django-contrib-auth)
-      - [- Archives](#--archives)
-      - [- Callsheetsnew](#--callsheetsnew)
-      - [- Characters](#--characters)
-      - [- Comments](#--comments)
-      - [- Departments](#--departments)
-      - [- Followers](#--followers)
-      - [- IndexCards](#--indexcards)
-      - [- IndexShots](#--indexshots)
-      - [- Likes](#--likes)
-      - [- Locations](#--locations)
-      - [- Moodshots](#--moodshots)
-      - [- Opened](#--opened)
-      - [- Posts](#--posts)
-      - [- Profiles](#--profiles)
-      - [- Scenes](#--scenes)
-      - [- Schedules](#--schedules)
-      - [- Scripts](#--scripts)
-      - [- Shotlists](#--shotlists)
   * [Languages Used - (Shot Caller and Shot Caller Production - Front and Backend)](#languages-used----shot-caller-and-shot-caller-production---front-and-backend-)
   * [Frameworks, Databases, Libraries & Programs Used - (Shot Caller and Shot Caller Production - Front and Backend)](#frameworks--databases--libraries---programs-used----shot-caller-and-shot-caller-production---front-and-backend-)
   * [Testing](#testing)
   * [Deployment - (Shot Caller and Shot Caller Production - Front and Backend)](#deployment----shot-caller-and-shot-caller-production---front-and-backend-)
-    + [Development platform](#development-platform)
-    + [Repository](#repository)
-    + [Deploy to Heroku](#deploy-to-heroku)
-    + [Requirements for the Shot Caller DRF Backend](#requirements-for-the-shot-caller-drf-backend)
-    + [Dependencies for the Shot Caller React Frontend](#dependencies-for-the-shot-caller-react-frontend)
   * [Credits - (Shot Caller and Shot Caller Production - Front and Backend)](#credits----shot-caller-and-shot-caller-production---front-and-backend-)
-    + [Code](#code)
-    + [Content](#content)
-    + [Media](#media)
-    + [Acknowledgements](#acknowledgements)
-
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 ## Features “Shot Caller Production”
 Find these here. [Shot Caller Production Readme](https://github.com/johnston9/shot-caller-production/blob/main/README.md)
