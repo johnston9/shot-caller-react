@@ -147,7 +147,7 @@ The site is responsive to all screen sizes and the images respond in proportion.
 
 ## Permissions
 
-Depending on their Permission Users will has access to different features of the app. Find these here. [Shot Caller Readme](https://github.com/johnston9/shot-caller/blob/main/README.md)
+Depending on their Permissions Users will has access to different features of the app. Find these here. [Shot Caller Readme](https://github.com/johnston9/shot-caller/blob/main/README.md)
 
 ## Information Architecture
 
