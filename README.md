@@ -108,10 +108,6 @@ Security measures prevent unauthorised users from accessing Project URLs they do
 ### Responsive Design
 The site is responsive to all screen sizes and the images respond in proportion. <br>
 
-## Testing
-You may find the testing here. [Shot Caller Testing](https://github.com/johnston9/Testing-Shot-Caller/blob/main/TESTING.md)
-
-
 [Back to Table of Content](#table-of-content)
 
 ## Permissions
@@ -285,8 +281,8 @@ The React Dependencies and DRF Requirements can be found in the Deployment secti
 [Back to Table of Content](#table-of-content)
 
 ## Testing
-- Find the complete testing coverage here on the Shot caller Frontend Testing doc.
-[Shot Caller Testing](https://github.com/johnston9/shot-caller/blob/main/TESTING.md)
+- Find the complete testing coverage here.
+[Shot Caller Testing](https://github.com/johnston9/Testing-Shot-Caller/blob/main/TESTING.md)
 
 All functionality was tested as it was being built to ensure there were no errors that it did what it was meant to do and that all database errors were handled correctly. <br> 
 
